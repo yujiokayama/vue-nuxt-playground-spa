@@ -1,6 +1,5 @@
 <template>
   <section>
-    {{ getComponentsData }}
     <div class="max-w-4xl mt-10 mx-auto px-5">
       <nuxt-link
         v-for="tag in tags"

@@ -30,10 +30,10 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    {
-      src: '~/plugins/highcharts-vue.js',
-      mode: 'client', // client or server
-    },
+    // {
+    //   src: '~/plugins/XXX.js',
+    //   mode: 'client', // client or server
+    // },
   ],
 
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-router

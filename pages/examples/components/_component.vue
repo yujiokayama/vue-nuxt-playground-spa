@@ -1,27 +1,21 @@
 <template>
   <div class="max-w-4xl mt-10 mx-auto px-5">
     <component :is="matchComponents" />
-    <Graph />
   </div>
 </template>
 
 <script>
-import Form from '~/components/examples/form/Form.vue'
-import Table from '~/components/examples//table/Table.vue'
+import BarChart from '~/components/examples/graph/BarChart.vue'
+import FunnelChart from '~/components/examples/graph/Funnel.vue'
 
 export default {
   components: {
-    Form,
-    Table,
+    BarChart,
+    FunnelChart,
   },
   async asyncData({ route }) {
     return {
       routeParams: await route.params,
-    }
-  },
-  data() {
-    return {
-      components: ['Table', 'Form'],
     }
   },
   computed: {
