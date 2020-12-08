@@ -1,7 +1,7 @@
 <template>
   <section class="charts">
     <h3>Funnel Chart</h3>
-    <VueHighcharts ref="funnelChart" :options="options" />
+    <vue-highcharts :options="options" ref="chart"></vue-highcharts>
   </section>
 </template>
 <script>
