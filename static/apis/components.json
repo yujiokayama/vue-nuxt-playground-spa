@@ -30,12 +30,12 @@
     ]
   },
   {
-    "name": "テーブル",
-    "slug": "table",
+    "name": "ドラッグコンポーネント",
+    "slug": "drag",
     "components": [
       {
-        "title": "テーブル",
-        "path": "/examples/components/Table"
+        "title": "ドラッグコンポーネント",
+        "path": "/examples/components/DraggableComponent"
       }
     ]
   }
