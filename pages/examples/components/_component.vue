@@ -6,13 +6,17 @@
 
 <script>
 import BarChart from '~/components/examples/graph/BarChart.vue'
-import FunnelChart from '~/components/examples/graph/Funnel.vue'
+import ColumnChart from '~/components/examples/graph/ColumnChart.vue'
+import FunnelChart from '~/components/examples/graph/FunnelChart.vue'
+import AreasplineChart from '~/components/examples/graph/AreasplineChart.vue'
 import DraggableComponent from '~/components/examples/draggable/DraggableComponent.vue'
 
 export default {
   components: {
     BarChart,
+    ColumnChart,
     FunnelChart,
+    AreasplineChart,
     DraggableComponent,
   },
   async asyncData({ route }) {

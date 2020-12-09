@@ -1,5 +1,3 @@
-// import axios from 'axios'
-
 export const state = () => ({
   componentsData: [],
 })
@@ -17,7 +15,9 @@ export const mutations = {
 }
 
 export const actions = {
-  fetchComponentsData({ commit }, data) {
-    commit('setComponentsData', data)
+  async fetchComponentsData({ commit }) {
+    const url = '/apis/components.json'
+    const response = await this.$axios.$get(url)
+    commit('setComponentsData', response)
   },
 }

@@ -10,10 +10,10 @@ export default {
     return {
       chartOptions: {
         chart: {
-          type: 'bar',
+          type: 'areaspline',
         },
         title: {
-          text: 'bar',
+          text: 'areaspline',
         },
         plotOptions: {
           series: {

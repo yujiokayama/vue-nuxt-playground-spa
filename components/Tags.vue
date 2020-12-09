@@ -2,7 +2,7 @@
   <section>
     <div class="max-w-4xl mt-10 mx-auto px-5">
       <nuxt-link
-        v-for="tag in tags"
+        v-for="tag in getComponentsData"
         :key="tag.name"
         :to="`/examples/components/${tag.slug}`"
       >
@@ -53,7 +53,7 @@ export default Vue.extend({
     }),
   },
   created() {
-    this.fetchComponentsData([{ tags: 'hoge' }])
+    this.fetchComponentsData()
   },
   mounted() {},
   methods: {

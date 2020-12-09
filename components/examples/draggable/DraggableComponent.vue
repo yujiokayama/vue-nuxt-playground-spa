@@ -1,14 +1,16 @@
 <template>
   <div>
     <div id="box1" class="box">
-      <draggable tag="ul" :options="{ group: 'ITEMS' }">
+      {{ items }}
+      <draggable v-model="items" tag="ul" :options="{ group: 'ITEMS' }">
         <li v-for="item in items" :key="item.no">
           {{ item.name }}-(No.{{ item.no }})
         </li>
       </draggable>
     </div>
     <div id="box2" class="box">
-      <draggable tag="ul" :options="{ group: 'ITEMS' }">
+      {{ items2 }}
+      <draggable v-model="items2" tag="ul" :options="{ group: 'ITEMS' }">
         <li v-for="item in items2" :key="item.no">
           {{ item.name }}-(No.{{ item.no }})
         </li>

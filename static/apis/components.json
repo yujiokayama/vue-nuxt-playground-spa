@@ -1,17 +1,5 @@
 [
   {
-    "name": "デーブル",
-    "slug": "table"
-  },
-  {
-    "name": "モーダル",
-    "slug": "modal"
-  },
-  {
-    "name": "タブ",
-    "slug": "tab"
-  },
-  {
     "name": "グラフ",
     "slug": "graph"
   }

@@ -10,10 +10,10 @@ export default {
     return {
       chartOptions: {
         chart: {
-          type: 'bar',
+          type: 'funnel',
         },
         title: {
-          text: 'bar',
+          text: 'Sales funnel',
         },
         plotOptions: {
           series: {
