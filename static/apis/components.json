@@ -1,6 +1,42 @@
 [
   {
-    "name": "グラフ",
-    "slug": "graph"
+    "name": "チャート",
+    "slug": "charts",
+    "components": [
+      {
+        "title": "横棒グラフ",
+        "path": "/examples/components/BarChart"
+      },
+      {
+        "title": "エリアスプライン",
+        "path": "/examples/components/AreasplineChart"
+      },
+      {
+        "title": "縦積みグラフ",
+        "path": "/examples/components/ColumnChart"
+      },
+      {
+        "title": "ファンネルグラフ",
+        "path": "/examples/components/FunnelChart"
+      },
+      {
+        "title": "パイグラフ",
+        "path": "/examples/components/PieChart"
+      },
+      {
+        "title": "縦棒グラフ",
+        "path": "/examples/components/BasicColumnChart"
+      }
+    ]
+  },
+  {
+    "name": "テーブル",
+    "slug": "table",
+    "components": [
+      {
+        "title": "テーブル",
+        "path": "/examples/components/Table"
+      }
+    ]
   }
 ]

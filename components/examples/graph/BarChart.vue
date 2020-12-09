@@ -16,6 +16,9 @@ export default {
           text: 'bar',
         },
         plotOptions: {
+          bar: {
+            animation: false,
+          },
           series: {
             dataLabels: {
               enabled: true,

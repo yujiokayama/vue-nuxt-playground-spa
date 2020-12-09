@@ -4,7 +4,7 @@
       <nuxt-link
         v-for="tag in getComponentsData"
         :key="tag.name"
-        :to="`/examples/components/${tag.slug}`"
+        :to="`/examples/archive/${tag.slug}`"
       >
         <div
           class="mr-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border"
@@ -33,11 +33,10 @@
   </section>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
 import { mapGetters, mapActions } from 'vuex'
 
-export default Vue.extend({
+export default {
   props: {
     tags: {
       type: Array,
@@ -61,7 +60,7 @@ export default Vue.extend({
       fetchComponentsData: 'modules/fetch_components/fetchComponentsData',
     }),
   },
-})
+}
 </script>
 
 <style lang="scss" scoped></style>

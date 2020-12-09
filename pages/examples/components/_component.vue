@@ -9,6 +9,8 @@ import BarChart from '~/components/examples/graph/BarChart.vue'
 import ColumnChart from '~/components/examples/graph/ColumnChart.vue'
 import FunnelChart from '~/components/examples/graph/FunnelChart.vue'
 import AreasplineChart from '~/components/examples/graph/AreasplineChart.vue'
+import PieChart from '~/components/examples/graph/PieChart.vue'
+import BasicColumnChart from '~/components/examples/graph/BasicColumnChart.vue'
 import DraggableComponent from '~/components/examples/draggable/DraggableComponent.vue'
 
 export default {
@@ -17,6 +19,8 @@ export default {
     ColumnChart,
     FunnelChart,
     AreasplineChart,
+    PieChart,
+    BasicColumnChart,
     DraggableComponent,
   },
   async asyncData({ route }) {
