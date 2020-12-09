@@ -1,6 +1,13 @@
 <template>
   <div class="max-w-4xl mt-10 mx-auto px-5">
+    {{ routeParams }}
     <component :is="matchComponents" />
+    <button
+      @click="prevPage"
+      class="mr-5 bg-blue-700 text-white border border-blue-700 font-bold py-2 px-6 rounded-lg"
+    >
+      戻る
+    </button>
   </div>
 </template>
 
@@ -23,9 +30,9 @@ export default {
     BasicColumnChart,
     DraggableComponent,
   },
-  async asyncData({ route }) {
+  asyncData({ route }) {
     return {
-      routeParams: await route.params,
+      routeParams: route.params,
     }
   },
   computed: {
@@ -38,6 +45,11 @@ export default {
   },
   created() {},
   mounted() {},
+  methods: {
+    prevPage() {
+      this.$router.go(-1)
+    },
+  },
 }
 </script>
 

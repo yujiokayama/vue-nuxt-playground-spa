@@ -27,9 +27,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   components: {},
-  async asyncData({ route, store }) {
-    await store.dispatch('modules/fetch_components/fetchComponentsData')
-
+  asyncData({ route, store }) {
     // 該当するスラッグのコンポーネントリストを返す
     const matchComponentsList = () => {
       return store.getters['modules/fetch_components/getComponentsData'].map(
@@ -38,9 +36,6 @@ export default {
         }
       )
     }
-
-    console.log(matchComponentsList())
-
     return {
       relatedComponents: matchComponentsList().flat(),
     }
