@@ -4,7 +4,7 @@
     <component :is="matchComponents" />
     <button
       @click="prevPage"
-      class="mr-5 bg-blue-700 text-white border border-blue-700 font-bold py-2 px-6 rounded-lg"
+      class="mt-5 mr-5 bg-blue-700 text-white border border-blue-700 font-bold py-2 px-6 rounded-lg"
     >
       戻る
     </button>
