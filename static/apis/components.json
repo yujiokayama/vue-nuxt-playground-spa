@@ -8,12 +8,20 @@
         "path": "/examples/components/BarChart"
       },
       {
+        "title": "エリアグラフ",
+        "path": "/examples/components/BasicAreaChart"
+      },
+      {
         "title": "エリアスプライン",
         "path": "/examples/components/AreasplineChart"
       },
       {
         "title": "縦積みグラフ",
-        "path": "/examples/components/ColumnChart"
+        "path": "/examples/components/StackingChart"
+      },
+      {
+        "title": "横積みグラフ",
+        "path": "/examples/components/HorizontalStackingChart"
       },
       {
         "title": "ファンネルグラフ",
@@ -22,6 +30,14 @@
       {
         "title": "パイグラフ",
         "path": "/examples/components/PieChart"
+      },
+      {
+        "title": "ドーナツグラフ",
+        "path": "/examples/components/DonutChart"
+      },
+      {
+        "title": "散布図",
+        "path": "/examples/components/ScatterPlotChart"
       },
       {
         "title": "縦棒グラフ",
@@ -36,6 +52,30 @@
       {
         "title": "ドラッグコンポーネント",
         "path": "/examples/components/DraggableComponent"
+      }
+    ]
+  },
+  {
+    "name": "エディタ",
+    "slug": "editor",
+    "components": [
+      {
+        "title": "テキストエディタ",
+        "path": "/examples/components/TextEditor"
+      }
+    ]
+  },
+  {
+    "name": "プログレス",
+    "slug": "progress",
+    "components": [
+      {
+        "title": "プログレスバー",
+        "path": "/examples/components/ProgressBar"
+      },
+      {
+        "title": "プログレスサークル",
+        "path": "/examples/components/ProgressCircle"
       }
     ]
   }

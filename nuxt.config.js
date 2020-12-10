@@ -38,6 +38,10 @@ export default {
       src: '~/plugins/highcharts-vue.js',
       mode: 'client', // client or server
     },
+    {
+      src: '~/plugins/vue-codemirror.js',
+      mode: 'client', // client or server
+    },
   ],
 
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-router

@@ -1,34 +1,53 @@
 <template>
   <div class="max-w-4xl mt-10 mx-auto px-5">
-    {{ routeParams }}
     <component :is="matchComponents" />
-    <button
-      @click="prevPage"
-      class="mt-5 mr-5 bg-blue-700 text-white border border-blue-700 font-bold py-2 px-6 rounded-lg"
-    >
-      戻る
-    </button>
+    <div class="flex justify-end">
+      <button
+        class="mt-5 bg-blue-700 text-white border border-blue-700 font-bold py-2 px-6 rounded-lg"
+        @click="prevPage"
+      >
+        戻る
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
+// チャート
 import BarChart from '~/components/examples/graph/BarChart.vue'
-import ColumnChart from '~/components/examples/graph/ColumnChart.vue'
+import StackingChart from '~/components/examples/graph/StackingChart.vue'
+import HorizontalStackingChart from '~/components/examples/graph/HorizontalStackingChart'
 import FunnelChart from '~/components/examples/graph/FunnelChart.vue'
+import BasicAreaChart from '~/components/examples/graph/BasicAreaChart.vue'
 import AreasplineChart from '~/components/examples/graph/AreasplineChart.vue'
 import PieChart from '~/components/examples/graph/PieChart.vue'
+import DonutChart from '~/components/examples/graph/DonutChart.vue'
 import BasicColumnChart from '~/components/examples/graph/BasicColumnChart.vue'
+import ScatterPlotChart from '~/components/examples/graph/ScatterPlotChart.vue'
+// ドラッグコンポーネント
 import DraggableComponent from '~/components/examples/draggable/DraggableComponent.vue'
+// テキストエディタ
+import TextEditor from '~/components/examples/editor/TextEditor.vue'
+// プログレス
+import ProgressBar from '~/components/examples/progress/ProgressBar.vue'
+import ProgressCircle from '~/components/examples/progress/ProgressCircle'
 
 export default {
   components: {
     BarChart,
-    ColumnChart,
+    StackingChart,
+    HorizontalStackingChart,
     FunnelChart,
+    BasicAreaChart,
     AreasplineChart,
     PieChart,
+    DonutChart,
     BasicColumnChart,
+    ScatterPlotChart,
     DraggableComponent,
+    TextEditor,
+    ProgressBar,
+    ProgressCircle,
   },
   asyncData({ route }) {
     return {
