@@ -16,6 +16,7 @@
         </li>
       </draggable>
     </div>
+    <div class="clear"></div>
   </div>
 </template>
 <script>
@@ -50,6 +51,9 @@ export default {
 }
 #box2 {
   background-color: #ddf;
+}
+.clear {
+  clear: both;
 }
 
 li {
