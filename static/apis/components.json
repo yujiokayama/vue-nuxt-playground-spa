@@ -78,5 +78,25 @@
         "path": "/examples/components/ProgressCircle"
       }
     ]
+  },
+  {
+    "name": "スケルトンスクリーン",
+    "slug": "skeleton",
+    "components": [
+      {
+        "title": "スケルトンスクリーンテスト",
+        "path": "/examples/components/SkeletonScreen"
+      }
+    ]
+  },
+  {
+    "name": "ツリー",
+    "slug": "tree",
+    "components": [
+      {
+        "title": "ツリーコンポーネント",
+        "path": "/examples/components/TreeComponent"
+      }
+    ]
   }
 ]

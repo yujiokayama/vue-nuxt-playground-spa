@@ -1,18 +1,25 @@
 <template>
-  <div class="circle-container">
-    <!-- right -->
-    <div class="square square-right">
-      <div class="square" :style="rightAngle">
-        <div class="circle-inner square-left"></div>
+  <div>
+    <div class="circle-container">
+      <div class="circle-bg"></div>
+      <!-- right -->
+      <div class="square square-right">
+        <div class="square" :style="rightAngle">
+          <transition appear>
+            <div v-if="show" class="circle-inner square-left"></div>
+          </transition>
+        </div>
       </div>
-    </div>
-    <div class="circle-text">
-      {{ percentView }}
-    </div>
-    <!-- left -->
-    <div class="square" style="left: 0">
-      <div class="square" :style="[leftAngle]">
-        <div class="circle-inner square-right"></div>
+      <div class="circle-text">
+        {{ percentView }}
+      </div>
+      <!-- left -->
+      <div class="square" style="left: 0">
+        <div class="square" :style="[leftAngle]">
+          <transition appear>
+            <div v-if="show" class="circle-inner square-right"></div>
+          </transition>
+        </div>
       </div>
     </div>
   </div>
@@ -21,9 +28,14 @@
 <script>
 export default {
   props: {
+    show: {
+      type: Boolean,
+      default: true,
+      required: false,
+    },
     percent: {
       type: Number,
-      default: 10,
+      default: 70,
       required: false,
     },
   },
@@ -82,7 +94,9 @@ export default {
     height: 200px;
     border-radius: 50%;
     border: 10px solid lightskyblue;
-    box-sizing: border-box;
+    &:before {
+      border-radius: 10px;
+    }
   }
   &-text {
     position: absolute;
@@ -92,5 +106,23 @@ export default {
     font-size: 20px;
     font-weight: bold;
   }
+  &-bg {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid lightgray;
+  }
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s;
+}
+
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+  transform: translate3d(0, -30px, 0);
+  transition: opacity 0.5s, transform 0.5s;
 }
 </style>

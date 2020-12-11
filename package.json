@@ -20,7 +20,9 @@
     "nuxt": "^2.14.6",
     "sass-loader": "^10.1.0",
     "vue-codemirror": "^4.0.6",
-    "vuedraggable": "^2.24.3"
+    "vue-content-loader": "^0.2.3",
+    "vuedraggable": "^2.24.3",
+    "vuejs-tree": "^2.0.0-5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

@@ -30,7 +30,11 @@ import DraggableComponent from '~/components/examples/draggable/DraggableCompone
 import TextEditor from '~/components/examples/editor/TextEditor.vue'
 // プログレス
 import ProgressBar from '~/components/examples/progress/ProgressBar.vue'
-import ProgressCircle from '~/components/examples/progress/ProgressCircle'
+import ProgressCircle from '~/components/examples/progress/ProgressCircle.vue'
+// スケルトンスクリーン
+import SkeletonScreen from '~/components/examples/skeleton/SkeletonScreen.vue'
+// ツリーコンポーネント
+import TreeComponent from '~/components/examples/tree/TreeComponent.vue'
 
 export default {
   components: {
@@ -48,6 +52,8 @@ export default {
     TextEditor,
     ProgressBar,
     ProgressCircle,
+    SkeletonScreen,
+    TreeComponent,
   },
   asyncData({ route }) {
     return {
