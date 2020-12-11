@@ -35,6 +35,8 @@ import ProgressCircle from '~/components/examples/progress/ProgressCircle.vue'
 import SkeletonScreen from '~/components/examples/skeleton/SkeletonScreen.vue'
 // ツリーコンポーネント
 import TreeComponent from '~/components/examples/tree/TreeComponent.vue'
+// CRUD
+import CRUD from '~/components/examples/crud/CRUD.vue'
 
 export default {
   components: {
@@ -54,9 +56,12 @@ export default {
     ProgressCircle,
     SkeletonScreen,
     TreeComponent,
+    CRUD,
   },
-  asyncData({ route }) {
+  async asyncData({ route, app }) {
+    const blog = await app.$api.getAPI()
     return {
+      blog,
       routeParams: route.params,
     }
   },

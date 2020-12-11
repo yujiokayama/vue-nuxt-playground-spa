@@ -7,7 +7,7 @@
         :to="`/examples/archive/${tag.slug}`"
       >
         <div
-          class="mr-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border"
+          class="mr-4 mb-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border"
         >
           <span class="pr-1">
             <svg

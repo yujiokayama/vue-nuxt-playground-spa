@@ -35,6 +35,14 @@ export default {
       mode: 'client', // client or server
     },
     {
+      src: '~/plugins/api.js',
+      mode: 'client', // client or server
+    },
+    {
+      src: '~/plugins/axios.js',
+      mode: 'client', // client or server
+    },
+    {
       src: '~/plugins/highcharts-vue.js',
       mode: 'client', // client or server
     },

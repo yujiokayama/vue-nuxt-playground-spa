@@ -98,5 +98,15 @@
         "path": "/examples/components/TreeComponent"
       }
     ]
+  },
+  {
+    "name": "CRUD",
+    "slug": "crud",
+    "components": [
+      {
+        "title": "CRUD",
+        "path": "/examples/components/CRUD"
+      }
+    ]
   }
 ]
