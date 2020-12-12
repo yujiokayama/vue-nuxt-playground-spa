@@ -58,10 +58,10 @@ export default {
     TreeComponent,
     CRUD,
   },
-  async asyncData({ route, app }) {
-    const blog = await app.$api.getAPI()
+  asyncData({ route, app }) {
+    // const blog = await app.$api.getAPI()
     return {
-      blog,
+      // blog,
       routeParams: route.params,
     }
   },
