@@ -108,5 +108,15 @@
         "path": "/examples/components/CRUD"
       }
     ]
+  },
+  {
+    "name": "レイアウト",
+    "slug": "layout",
+    "components": [
+      {
+        "title": "リキッドレイアウト",
+        "path": "/examples/template/liquid"
+      }
+    ]
   }
 ]

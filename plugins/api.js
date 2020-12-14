@@ -1,3 +1,12 @@
+/**
+ *
+ * ・CRUD操作について
+ *
+ * ・REST APIとは
+ * https://qiita.com/NagaokaKenichi/items/0647c30ef596cedf4bf2
+ *
+ */
+
 export default function ({ $axios }, inject) {
   const url = `https://ys-note.microcms.io/api/v1/post`
   const api = {
@@ -15,7 +24,7 @@ export default function ({ $axios }, inject) {
         filters: 'title[contains]非同期処理',
       }
       const response = await $axios
-        .get(url, { headers, params })
+        .$get(url, { headers, params })
         .catch((error) => {
           return error
         })
@@ -29,14 +38,16 @@ export default function ({ $axios }, inject) {
      */
     async postAPI() {
       const headers = {
-        'X-WRITE-API-KEY': '0d37c00f-04a6-4325-be02-553017669a5c',
+        'X-WRITE-API-KEY': process.env.WRITE_API_KEY,
         'Content-Type': 'application/json',
       }
       const body = {
         title: 'post test',
+        content: 'testですよ',
+        tags: ['CSS'],
       }
       const post = await $axios
-        .post(url, JSON.stringify(body), { headers })
+        .$post(url, JSON.stringify(body), { headers })
         .catch((error) => {
           return error
         })

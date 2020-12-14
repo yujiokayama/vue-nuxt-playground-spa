@@ -8,7 +8,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
+    "lint": "yarn lint:js",
+    "json": "node static/mock.js > static/apis/mock.json"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
@@ -22,7 +23,8 @@
     "vue-codemirror": "^4.0.6",
     "vue-content-loader": "^0.2.3",
     "vuedraggable": "^2.24.3",
-    "vuejs-tree": "^2.0.0-5"
+    "vuejs-tree": "^2.0.0-5",
+    "vuex-persistedstate": "^4.0.0-beta.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
@@ -33,6 +35,7 @@
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "faker": "^5.1.0",
     "prettier": "^2.1.2"
   }
 }
