@@ -6,22 +6,28 @@
  */
 const faker = require('faker')
 // 日本語化
-faker.locale = 'ja'
+// faker.locale = 'ja'
 
 const db = {
-  users: [],
+  companies: [],
 }
 
-const mockLength = 10
+const mockLength = 100
 
+/**
+ * 企業一覧サンプル
+ */
 for (let i = 0; i < mockLength; i++) {
-  db.users.push({
-    //id
-    id: faker.random.number(),
-    //名前
-    name: faker.name.findName(),
-    //メールアドレス
-    email: faker.internet.email(),
+  db.companies.push({
+    companyName: faker.company.companyName(),
+    phone: faker.phone.phoneNumber(),
+    address: faker.address.streetAddress(),
+    jobType: faker.name.jobType(),
+    employeeSize: faker.random.number(),
+    capital: faker.random.number(),
+    tag: faker.random.words(2).split(' '),
+    all: faker.internet.url(),
+    settings: faker.internet.url(),
   })
 }
 
