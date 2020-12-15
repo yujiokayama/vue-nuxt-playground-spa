@@ -8,24 +8,26 @@ const faker = require('faker')
 // 日本語化
 // faker.locale = 'ja'
 
-const db = {
-  companies: [],
-}
+// const db = {
+//   xxx: []
+// }
+let db = []
 
-const mockLength = 100
+let mockLength = 100
 
 /**
  * 企業一覧サンプル
  */
 for (let i = 0; i < mockLength; i++) {
-  db.companies.push({
+  db.push({
+    contentid: null,
     companyName: faker.company.companyName(),
     phone: faker.phone.phoneNumber(),
     address: faker.address.streetAddress(),
     jobType: faker.name.jobType(),
     employeeSize: faker.random.number(),
     capital: faker.random.number(),
-    tag: faker.random.words(2).split(' '),
+    tag: 'tag1 tag2',
     all: faker.internet.url(),
     settings: faker.internet.url(),
   })
