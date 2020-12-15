@@ -8,7 +8,10 @@
  */
 
 export default function ({ $axios }, inject) {
-  const url = `https://ys-note.microcms.io/api/v1/post`
+  const uri = {
+    post: `https://ys-note.microcms.io/api/v1/post`,
+    company: `https://ys-note.microcms.io/api/v1/company`,
+  }
   const api = {
     /**
      * Get
@@ -24,7 +27,7 @@ export default function ({ $axios }, inject) {
         filters: 'title[contains]非同期処理',
       }
       const response = await $axios
-        .$get(url, { headers, params })
+        .$get(uri.post, { headers, params })
         .catch((error) => {
           return error
         })
@@ -47,7 +50,7 @@ export default function ({ $axios }, inject) {
         tags: ['CSS'],
       }
       const post = await $axios
-        .$post(url, JSON.stringify(body), { headers })
+        .$post(uri.post, JSON.stringify(body), { headers })
         .catch((error) => {
           return error
         })
