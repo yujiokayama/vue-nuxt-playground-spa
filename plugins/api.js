@@ -1,20 +1,14 @@
 export default function ({ $axios }, inject) {
-  const url = `https://ys-note.microcms.io/api/v1/company`
   const api = {
     /**
      * Get
-     * @param {url} string
-     * @param {params} object
+     * @param {url} string URI
+     * @param {params} object クエリ
      */
-    async getAPI() {
+    async getAPI(url, params) {
       const headers = {
         'X-API-KEY': process.env.API_KEY,
         'Content-Type': 'application/json',
-      }
-      const params = {
-        limit: 10,
-        offset: 10,
-        // filters: 'title[contains]XXX',
       }
       const response = await $axios
         .$get(url, { headers, params })
@@ -29,7 +23,7 @@ export default function ({ $axios }, inject) {
      * @param {body} object
      * @param {header} object
      */
-    async postAPI() {
+    async postAPI(url) {
       const headers = {
         'X-WRITE-API-KEY': process.env.WRITE_API_KEY,
         'Content-Type': 'application/json',

@@ -1,18 +1,31 @@
 <template>
   <div>
+    <pre>
+    {{ items }}
+    </pre>
     <table>
       <thead>
         <tr>
-          <th>I</th>
-          <th>B</th>
-          <th>X</th>
+          <th>企業名</th>
+          <th>電話番号</th>
+          <th>住所</th>
+          <th>業種</th>
+          <th>従業員規模</th>
+          <th>資本金</th>
+          <th>タグ</th>
+          <th></th>
+          <th>設定</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-          <td>C</td>
+        <tr v-for="item in items.contents" :key="item.id">
+          <td>{{ item.companyName }}</td>
+          <td>{{ item.phone }}</td>
+          <td>{{ item.companyName }}</td>
+          <td>{{ item.companyName }}</td>
+          <td>{{ item.companyName }}</td>
+          <td>{{ item.companyName }}</td>
+          <td>{{ item.companyName }}</td>
         </tr>
       </tbody>
     </table>

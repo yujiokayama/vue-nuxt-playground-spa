@@ -114,12 +114,12 @@
     ]
   },
   {
-    "name": "ペジネーション",
-    "slug": "pagination",
+    "name": "テーブル＆ペジネーション",
+    "slug": "table_and_pagination",
     "components": [
       {
         "title": "ペジネーション",
-        "path": "/examples/components/Pagination"
+        "path": "/examples/template/table_and_pagination"
       }
     ]
   },
