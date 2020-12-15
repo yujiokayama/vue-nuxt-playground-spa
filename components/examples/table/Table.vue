@@ -1,15 +1,28 @@
 <template>
   <div>
-    <p>table components</p>
+    <table>
+      <thead>
+        <tr>
+          <th>I</th>
+          <th>B</th>
+          <th>X</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
-
 export default {
   props: {
-    data: {
+    items: {
       type: Array,
       default: () => {
         return []
@@ -17,22 +30,10 @@ export default {
       required: false,
     },
   },
-  computed: {
-    ...mapGetters({
-      tableData: 'components/getTableData',
-    }),
-  },
-  created() {
-    this.fetchTableData()
-  },
+  computed: {},
+  created() {},
   mounted() {},
-
-  methods: {
-    ...mapActions({
-      fetchTableData: 'components/fetchTableData',
-    }),
-    getEvent() {},
-  },
+  methods: {},
 }
 </script>
 

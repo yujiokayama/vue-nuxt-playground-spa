@@ -62,6 +62,10 @@
       {
         "title": "テキストエディタ",
         "path": "/examples/components/TextEditor"
+      },
+      {
+        "title": "Wysiwygエディタ",
+        "path": "/examples/components/WysiwygEditor"
       }
     ]
   },
@@ -106,6 +110,16 @@
       {
         "title": "CRUD",
         "path": "/examples/components/CRUD"
+      }
+    ]
+  },
+  {
+    "name": "ペジネーション",
+    "slug": "pagination",
+    "components": [
+      {
+        "title": "ペジネーション",
+        "path": "/examples/components/Pagination"
       }
     ]
   },

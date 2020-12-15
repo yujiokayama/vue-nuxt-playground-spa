@@ -26,8 +26,9 @@ import BasicColumnChart from '~/components/examples/graph/BasicColumnChart.vue'
 import ScatterPlotChart from '~/components/examples/graph/ScatterPlotChart.vue'
 // ドラッグコンポーネント
 import DraggableComponent from '~/components/examples/draggable/DraggableComponent.vue'
-// テキストエディタ
+// エディタ
 import TextEditor from '~/components/examples/editor/TextEditor.vue'
+import WysiwygEditor from '~/components/examples/editor/WysiwygEditor.vue'
 // プログレス
 import ProgressBar from '~/components/examples/progress/ProgressBar.vue'
 import ProgressCircle from '~/components/examples/progress/ProgressCircle.vue'
@@ -35,6 +36,8 @@ import ProgressCircle from '~/components/examples/progress/ProgressCircle.vue'
 import SkeletonScreen from '~/components/examples/skeleton/SkeletonScreen.vue'
 // ツリーコンポーネント
 import TreeComponent from '~/components/examples/tree/TreeComponent.vue'
+// ペジネーション
+import Pagination from '~/components/examples/pagination/Pagination.vue'
 // CRUD
 import CRUD from '~/components/examples/crud/CRUD.vue'
 
@@ -52,10 +55,12 @@ export default {
     ScatterPlotChart,
     DraggableComponent,
     TextEditor,
+    WysiwygEditor,
     ProgressBar,
     ProgressCircle,
     SkeletonScreen,
     TreeComponent,
+    Pagination,
     CRUD,
   },
   asyncData({ route, app }) {

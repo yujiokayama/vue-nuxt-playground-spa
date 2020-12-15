@@ -1,22 +1,27 @@
 <template>
-  <div></div>
+  <div>
+    <nav class="pagination">
+      <!-- Prev -->
+      <div>
+        <a href="#" class="" aria-label="Previous" @click.prevent=""> prev </a>
+      </div>
+      <!-- //Prev -->
+      <!-- Page Num -->
+      <div>
+        <nuxt-link to="#" class=""> 1 </nuxt-link>
+      </div>
+      <!-- //Page Num -->
+      <!-- Next -->
+      <div>
+        <a href="#" class="" aria-label="Next" @click.prevent=""> next </a>
+      </div>
+      <!-- //Next -->
+    </nav>
+    <div>現在xxからxx件を表示</div>
+  </div>
 </template>
 
 <script>
-/**
- * 構築方法を考える
- */
-
-/*
-■MOCK JSONをどう作るか
-
-■propsに何を持たせるか
-
-■ライブラリも検討する
-
-
-*/
-
 export default {
   props: {
     items: {
@@ -25,23 +30,30 @@ export default {
         return []
       },
       required: false,
-      parPage: {
-        type: Number,
-        default: 10,
-        required: false,
-      },
-      currentPaga: {
-        type: Number,
-        default: 1,
-        required: false,
-      },
+    },
+    parPage: {
+      type: Number,
+      default: 10,
+      required: false,
+    },
+    currentPage: {
+      type: Number,
+      default: 1,
+      required: false,
     },
   },
   computed: {},
   created() {},
   mounted() {},
-  methods: {},
+  methods: {
+    Prev() {},
+    Next() {},
+  },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.pagination {
+  display: flex;
+}
+</style>
