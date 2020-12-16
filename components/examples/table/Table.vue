@@ -1,8 +1,5 @@
 <template>
   <div>
-    <pre>
-    {{ items }}
-    </pre>
     <table>
       <thead>
         <tr>
@@ -18,14 +15,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in items.contents" :key="item.id">
-          <td>{{ item.companyName }}</td>
-          <td>{{ item.phone }}</td>
-          <td>{{ item.companyName }}</td>
-          <td>{{ item.companyName }}</td>
-          <td>{{ item.companyName }}</td>
-          <td>{{ item.companyName }}</td>
-          <td>{{ item.companyName }}</td>
+        <tr v-for="content in contents" :key="content.id">
+          <td>{{ content.companyName }}</td>
+          <td>{{ content.phone }}</td>
+          <td>{{ content.address }}</td>
+          <td>{{ content.jobType }}</td>
+          <td>{{ content.employeeSize }}</td>
+
+          <td>{{ content.capital }}</td>
+          <td>{{ content.tag }}</td>
+          <td></td>
+          <td>{{ content.settings }}</td>
         </tr>
       </tbody>
     </table>
@@ -35,7 +35,7 @@
 <script>
 export default {
   props: {
-    items: {
+    contents: {
       type: Array,
       default: () => {
         return []

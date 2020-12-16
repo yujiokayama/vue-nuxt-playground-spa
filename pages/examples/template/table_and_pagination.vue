@@ -1,7 +1,12 @@
 <template>
   <div class="max-w-4xl mt-10 mx-auto px-5">
-    <Table :items="apiData" />
-    <pagination />
+    <Table :contents="contents" />
+    <pagination
+      :contents="contents"
+      :limit="limit"
+      :totalCount="totalCount"
+      :offset="offset"
+    />
   </div>
 </template>
 
@@ -15,12 +20,17 @@ export default {
   },
   async asyncData({ $api }) {
     const url = `https://ys-note.microcms.io/api/v1/company`
-    const params = {
-      limit: 10,
-      offset: 10,
-    }
+    // const params = {
+    //   limit: 20,
+    //   offset: 0,
+    // }
+    const responce = await $api.getAPI(url)
+    const { contents, limit, offset, totalCount } = responce
     return {
-      apiData: await $api.getAPI(url, params),
+      contents,
+      limit,
+      offset,
+      totalCount,
     }
   },
   computed: {},
