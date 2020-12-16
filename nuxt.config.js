@@ -47,6 +47,10 @@ export default {
       mode: 'client', // client or server
     },
     {
+      src: '~/plugins/vue-tinymce.js',
+      mode: 'client', // client or server
+    },
+    {
       src: '~/plugins/vue-codemirror.js',
       mode: 'client', // client or server
     },
