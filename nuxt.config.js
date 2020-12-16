@@ -47,7 +47,7 @@ export default {
       mode: 'client', // client or server
     },
     {
-      src: '~/plugins/vue-tinymce.js',
+      src: '~/plugins/vue-froala-wysiwyg',
       mode: 'client', // client or server
     },
     {
