@@ -47,7 +47,7 @@ export default {
       mode: 'client', // client or server
     },
     {
-      src: '~/plugins/vue-froala-wysiwyg',
+      src: '~/plugins/vue-quill-editor.js',
       mode: 'client', // client or server
     },
     {

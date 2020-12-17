@@ -24,6 +24,7 @@ import PieChart from '~/components/examples/graph/PieChart.vue'
 import DonutChart from '~/components/examples/graph/DonutChart.vue'
 import BasicColumnChart from '~/components/examples/graph/BasicColumnChart.vue'
 import ScatterPlotChart from '~/components/examples/graph/ScatterPlotChart.vue'
+import ParetoChart from '~/components/examples/graph/ParetoChart.vue'
 // ドラッグコンポーネント
 import DraggableComponent from '~/components/examples/draggable/DraggableComponent.vue'
 // エディタ
@@ -38,6 +39,8 @@ import SkeletonScreen from '~/components/examples/skeleton/SkeletonScreen.vue'
 import TreeComponent from '~/components/examples/tree/TreeComponent.vue'
 // ペジネーション
 import Pagination from '~/components/examples/pagination/Pagination.vue'
+// タスク
+import Trello from '~/components/examples/task/Trello.vue'
 // CRUD
 import CRUD from '~/components/examples/crud/CRUD.vue'
 
@@ -53,6 +56,7 @@ export default {
     DonutChart,
     BasicColumnChart,
     ScatterPlotChart,
+    ParetoChart,
     DraggableComponent,
     TextEditor,
     WysiwygEditor,
@@ -61,12 +65,11 @@ export default {
     SkeletonScreen,
     TreeComponent,
     Pagination,
+    Trello,
     CRUD,
   },
   asyncData({ route, app }) {
-    // const blog = await app.$api.getAPI()
     return {
-      // blog,
       routeParams: route.params,
     }
   },

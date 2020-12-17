@@ -42,6 +42,10 @@
       {
         "title": "縦棒グラフ",
         "path": "/examples/components/BasicColumnChart"
+      },
+      {
+        "title": "パレットグラフ",
+        "path": "/examples/components/ParetoChart"
       }
     ]
   },
@@ -120,6 +124,16 @@
       {
         "title": "ペジネーション",
         "path": "/examples/template/table_and_pagination"
+      }
+    ]
+  },
+  {
+    "name": "タスク管理",
+    "slug": "layout",
+    "components": [
+      {
+        "title": "Trelloっぽいやつ",
+        "path": "/examples/components/Trello"
       }
     ]
   },
