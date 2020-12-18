@@ -44,7 +44,7 @@
         "path": "/examples/components/BasicColumnChart"
       },
       {
-        "title": "パレットグラフ",
+        "title": "パレートグラフ",
         "path": "/examples/components/ParetoChart"
       }
     ]

@@ -29,8 +29,6 @@ export default {
           symbolRadius: 0,
           // シンボルの間隔
           symbolPadding: 5,
-          // シンボルのheight
-          symbolHeight: 10,
         },
         title: {
           text: 'Pareto Chart',
@@ -54,7 +52,7 @@ export default {
             title: {
               text: '残高',
             },
-            max: 250,
+            max: 100,
             min: 0,
             opposite: true,
             labels: {
@@ -99,6 +97,13 @@ export default {
             type: 'pareto',
             name: '残高',
             data: [100, 100, 150, 200, 250],
+            color: 'black',
+            marker: {
+              fillColor: '#ffffff',
+              lineColor: '#000000',
+              lineWidth: 5,
+              radius: 10,
+            },
           },
         ],
       },
