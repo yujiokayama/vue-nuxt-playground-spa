@@ -129,7 +129,7 @@
   },
   {
     "name": "タスク管理",
-    "slug": "layout",
+    "slug": "task",
     "components": [
       {
         "title": "Trelloっぽいやつ",
@@ -144,6 +144,16 @@
       {
         "title": "リキッドレイアウト",
         "path": "/examples/template/liquid"
+      }
+    ]
+  },
+  {
+    "name": "CSS命名ルール参考",
+    "slug": "css_rule",
+    "components": [
+      {
+        "title": "ダッシュボードレイアウト",
+        "path": "/examples/css_rule/dashboard"
       }
     ]
   }
