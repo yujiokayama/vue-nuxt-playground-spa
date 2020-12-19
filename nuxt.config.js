@@ -13,7 +13,14 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons',
+      },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -32,6 +39,14 @@ export default {
   plugins: [
     {
       src: '~/plugins/main.js',
+      mode: 'client', // client or server
+    },
+    {
+      src: '~/plugins/common.js',
+      mode: 'client', // client or server
+    },
+    {
+      src: '~/plugins/vue-material.js',
       mode: 'client', // client or server
     },
     {

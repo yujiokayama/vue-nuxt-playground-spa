@@ -6,25 +6,132 @@
     <!-- main -->
     <div class="main">
       <div class="card-container">
-        <div class="card col-4"></div>
-        <div class="card col-4"></div>
-        <div class="card col-4"></div>
-        <div class="card col-4"></div>
-        <div class="card col-4"></div>
-        <div class="card col-4"></div>
+        <!-- section1 -->
+        <div class="card-box col-4">
+          <div class="card-list">
+            <div class="card-list-left">
+              <dl>
+                <dt class="title">ページビュー数</dt>
+                <dd class="text">
+                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
+                </dd>
+              </dl>
+            </div>
+            <div class="card-list-right">
+              <span class="title">前週比</span>
+              <span class="text"
+                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+              >
+              <div>
+                <md-icon class="icon">north</md-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-box col-4">
+          <div class="card-list">
+            <div class="card-list-left">
+              <dl>
+                <dt class="title">ページビュー数</dt>
+                <dd class="text">
+                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
+                </dd>
+              </dl>
+            </div>
+            <div class="card-list-right">
+              <span class="title">前週比</span>
+              <span class="text"
+                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card-box col-4">
+          <div class="card-list">
+            <div class="card-list-left">
+              <dl>
+                <dt class="title">ページビュー数</dt>
+                <dd class="text">
+                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
+                </dd>
+              </dl>
+            </div>
+            <div class="card-list-right">
+              <span class="title">前週比</span>
+              <span class="text"
+                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card-box col-4">
+          <div class="card-list">
+            <div class="card-list-left">
+              <dl>
+                <dt class="title">ページビュー数</dt>
+                <dd class="text">
+                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
+                </dd>
+              </dl>
+            </div>
+            <div class="card-list-right">
+              <span class="title">前週比</span>
+              <span class="text"
+                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card-box col-4">
+          <div class="card-list">
+            <div class="card-list-left">
+              <dl>
+                <dt class="title">ページビュー数</dt>
+                <dd class="text">
+                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
+                </dd>
+              </dl>
+            </div>
+            <div class="card-list-right">
+              <span class="title">前週比</span>
+              <span class="text"
+                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card-box col-4">
+          <div class="card-list">
+            <div class="card-list-left">
+              <dl>
+                <dt class="title">ページビュー数</dt>
+                <dd class="text">
+                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
+                </dd>
+              </dl>
+            </div>
+            <div class="card-list-right">
+              <span class="title">前週比</span>
+              <span class="text"
+                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- /section1 -->
       </div>
       <div class="card-container">
-        <div class="card col-12"></div>
+        <div class="card-box col-12"></div>
       </div>
       <div class="card-container">
-        <div class="card col-12"></div>
+        <div class="card-box col-12"></div>
       </div>
       <div class="card-container">
-        <div class="card col-8"></div>
-        <div class="card col-4"></div>
+        <div class="card-box col-8"></div>
+        <div class="card-box col-4"></div>
       </div>
       <div class="card-container">
-        <div class="card col-12"></div>
+        <div class="card-box col-12"></div>
       </div>
     </div>
     <!-- /main -->
@@ -35,13 +142,141 @@
 export default {
   data() {
     return {
-      cmsDashBoard: {},
+      cmsDashBoard: {
+        pageView: {
+          view: 1000,
+          comparedWeek: '1.08',
+        },
+        uniqueUser: {
+          user: 100,
+          comparedWeek: '1.08',
+        },
+        bounceRate: {
+          rate: 78,
+          comparedWeek: '1.08',
+        },
+        conversionRate: {
+          rate: 11.45,
+          comparedWeek: '1.08',
+        },
+        stayTime: {
+          time: '00:01:09',
+          comparedWeek: '1.08',
+        },
+        newUser: {
+          user: 10,
+          comparedWeek: '1.08',
+        },
+        analytics: {
+          prev: 10,
+          acitve: 30,
+        },
+        attractingCustomers: {
+          search: 10,
+          mail: 10,
+          site: 5,
+          directInflow: 100,
+        },
+        sessionByDevice: {
+          PC: 40.2,
+          SP: 21.5,
+          Tab: 9.1,
+          Other: 29.2,
+        },
+      },
     }
+  },
+  computed: {
+    dataBlock1() {
+      const {
+        pageView,
+        uniqueUser,
+        bounceRate,
+        conversionRate,
+        stayTime,
+        newUser,
+      } = this.cmsDashBoard
+      return [
+        pageView,
+        uniqueUser,
+        bounceRate,
+        conversionRate,
+        stayTime,
+        newUser,
+      ]
+    },
+  },
+  methods: {
+    commaSeparate(num) {
+      return this.$common.commaSeparate(num)
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+/**
+/////////////////////////////////////////////
+リセットについて
+https://github.com/hankchizljaw/modern-css-reset/blob/master/dist/reset.min.css
+/////////////////////////////////////////////
+*/
+
+/* A Modern CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /**
 /////////////////////////////////////////////
  基本ルール
@@ -103,7 +338,6 @@ export default {
   flex: 1;
   padding: 0 40px;
   .card {
-    @include component-card($padding: 32px 26px);
     &-container {
       @include grid-layout();
       &:not(:first-child) {
@@ -112,6 +346,63 @@ export default {
       @for $index from 1 through 12 {
         .col-#{$index} {
           grid-column-start: span $index;
+        }
+      }
+    }
+    &-box {
+      @include component-card($padding: 32px 26px);
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      &-left {
+        .title {
+          width: 119px;
+          height: 25px;
+          text-align: left;
+          font: normal normal normal 17px/22px Noto Sans JP Regular;
+          letter-spacing: 0px;
+          color: #1e1e1e;
+          opacity: 1;
+        }
+        .text {
+          width: 134px;
+          height: 41px;
+          margin: 2px 0 0 0;
+          text-align: left;
+          font: normal normal normal 28px/34px Noto Sans JP Bold;
+          font-weight: bold;
+          letter-spacing: 0px;
+          color: #1e1e1e;
+          opacity: 1;
+        }
+      }
+      &-right {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 20px;
+        .title {
+          width: 36px;
+          height: 18px;
+          text-align: left;
+          font: normal normal normal 12px/16px Noto Sans JP Regular;
+          letter-spacing: 0px;
+          color: #8a8a8e;
+          opacity: 1;
+        }
+        .text {
+          width: 52px;
+          height: 25px;
+          margin: 0 0 0 8px;
+          text-align: left;
+          font: normal normal normal 17px/22px Noto Sans JP Bold;
+          letter-spacing: 0px;
+          color: #34c759;
+          opacity: 1;
+        }
+        .icon {
+          margin: 0 0 0 8px;
+          color: #34c759;
         }
       }
     }
