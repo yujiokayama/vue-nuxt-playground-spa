@@ -23,7 +23,7 @@
                 >{{ cmsDashBoard.pageView.comparedWeek }}%</span
               >
               <div>
-                <md-icon class="icon">north</md-icon>
+                <md-icon class="icon">arrow_upward</md-icon>
               </div>
             </div>
           </div>
@@ -215,68 +215,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/**
-/////////////////////////////////////////////
-リセットについて
-https://github.com/hankchizljaw/modern-css-reset/blob/master/dist/reset.min.css
-/////////////////////////////////////////////
-*/
-
-/* A Modern CSS Reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 /**
 /////////////////////////////////////////////
  基本ルール
