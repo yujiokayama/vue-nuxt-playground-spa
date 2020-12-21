@@ -106,10 +106,17 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-webfontloader',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
+
+  webfontloader: {
+    google: {
+      families: ['Noto+Sans+JP:400,700'],
+    },
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

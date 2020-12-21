@@ -9,8 +9,7 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "yarn lint:js",
-    "json": "node static/mock.js > static/apis/mock.json",
-    "csv": "node static/json2csv.js"
+    "json": "node static/mock.js > static/apis/mock.json"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
@@ -22,12 +21,12 @@
     "highcharts-vue": "^1.3.5",
     "node-sass": "^5.0.0",
     "nuxt": "^2.14.6",
+    "nuxt-webfontloader": "^1.1.0",
     "sass-loader": "^10.1.0",
     "vue-apexcharts": "^1.6.0",
     "vue-codemirror": "^4.0.6",
     "vue-content-loader": "^0.2.3",
     "vue-material": "^1.0.0-beta-15",
-    "vue-material-design-icons": "^4.11.0",
     "vue-quill-editor": "^3.0.6",
     "vuedraggable": "^2.24.3",
     "vuejs-tree": "^2.0.0-5",
