@@ -36,6 +36,11 @@ export default {
     },
   ],
 
+  // SCSSの変数を展開し、全ページから参照できるようにする
+  styleResources: {
+    scss: ['~/assets/styles/scss/base/_variables.scss'],
+  },
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     {
@@ -94,6 +99,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/style-resources',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
