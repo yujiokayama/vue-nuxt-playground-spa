@@ -76,7 +76,6 @@
             </div>
           </div>
         </div>
-
         <div class="card-box col-4">
           <div class="card-item">
             <div class="card-item-data">
@@ -148,7 +147,6 @@
         </div>
       </div>
       <!-- /blcok end -->
-
       <div class="card">
         <div class="card-box col-12"></div>
       </div>
@@ -206,7 +204,7 @@ export default {
 /**
   /////////////////////////////////////////////
   基本ルール
-  ・クラス命名ルールはケバブケース（チェインケース）
+  ・
   ・必要最低限のSCSS（アンパサンド、ネステッドルール、ミックスイン、インクルード、for、変数、パーシャルくらい？）
   /////////////////////////////////////////////
   */
@@ -223,7 +221,7 @@ export default {
   margin: $margin;
   padding: $padding;
   background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 1px 5px #000029;
+  box-shadow: 0px 1px 5px #d6d6d6;
   border-radius: 6px;
   opacity: 1;
 }

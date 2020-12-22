@@ -1,0 +1,87 @@
+/*
+変数
+*/
+
+$color-twitter: #55acee;
+$color-facebook: #3b5998;
+
+.p-button--twitter {
+  background-color: $color-twitter;
+}
+.p-button--facebook {
+  background-color: $color-facebook;
+}
+
+/*
+map
+*/
+
+$colors1: (
+  line: #0ccc56,
+);
+
+@function colors1($key) {
+  @return map-get($colors1, $key);
+}
+
+.colors1 {
+  color: colors1(line);
+}
+
+/*
+mapと@eachを組み合わせて自動化する
+*/
+
+$colors: (
+  twitter: (
+    #55acee,
+    #fff,
+  ),
+  facebook: (
+    #3b5998,
+    #fff,
+  ),
+);
+
+.button {
+  @each $key, $value in $colors {
+    // valueの1つ目の値を変数に格納する。
+    $background-color: nth($value, 1);
+    // valueの2つ目の値を変数に格納する。
+    $font-color: nth($value, 2);
+    &--#{$key} {
+      color: $font-color;
+      background-color: $background-color;
+    }
+  }
+}
+
+// 色を定義する
+$color_primary: #155AEE;
+$color_primary_light: #4D82F3;
+$color_primary_heavy: #114CCA;
+
+// 定義した色を、さらに機能的な定義に与える
+$button_primary_base: $color_primary;
+$button_primary_hover: $color_primary_light;
+$button_primary_active: $color_primary_heavy;
+$button_primary_text: #FCFDFD;
+
+// Mixin
+@mixin button_primary_color {
+  background-color: $button_primary_base; // 背景色
+  color: $button_primary_text; // 文字色（前景色）
+  &:hover {
+    background-color: $button_primary_hover;
+  }
+  &:active {
+    background-color: $button_primary_active;
+  }
+}
+
+// 使うときにincludeする
+.button {
+  @include button_primary_color;
+}
+
+
