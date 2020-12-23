@@ -1,21 +1,16 @@
 <template>
-  <div class="flex flex-col h-screen mt-10">
+  <div>
     <Header />
-    <main class="flex-grow">
-      <Nuxt />
-    </main>
-    <Footer />
+    <Nuxt />
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header.vue'
-import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
     Header,
-    Footer,
   },
 }
 </script>

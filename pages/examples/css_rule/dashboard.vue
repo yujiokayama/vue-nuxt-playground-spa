@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="dashboard-container">
     <!-- side -->
     <div class="side"></div>
     <!-- /side -->
@@ -160,6 +160,27 @@
       <div class="card">
         <div class="card-box col-12"></div>
       </div>
+      <div class="card">
+        <div class="card-box col-12"></div>
+      </div>
+      <div class="card">
+        <div class="card-box col-12"></div>
+      </div>
+      <div class="card">
+        <div class="card-box col-12"></div>
+      </div>
+      <div class="card">
+        <div class="card-box col-12"></div>
+      </div>
+      <div class="card">
+        <div class="card-box col-12"></div>
+      </div>
+      <div class="card">
+        <div class="card-box col-12"></div>
+      </div>
+      <div class="card">
+        <div class="card-box col-12"></div>
+      </div>
     </div>
     <!-- /main -->
   </div>
@@ -167,6 +188,7 @@
 
 <script>
 export default {
+  layout: 'dashboard',
   async asyncData({ $api }) {
     return {
       cmsDashBoard: await $api.getAPI('/apis/dashboaard.json'),
@@ -249,17 +271,23 @@ export default {
   <button class="button _red"></button>
   */
 
-.container {
+.dashboard-container {
   display: flex;
   min-width: 1366px;
   margin: 20px auto 0;
 }
 .side {
+  position: fixed;
   width: 250px;
+  height: 100vh;
   border: 1px solid #ebeced;
+  background-color: #8a8a8e;
+  z-index: 100;
 }
 .main {
-  flex: 1;
+  position: relative;
+  width: calc(100% - 250px);
+  left: 258px;
   padding: 0 40px;
 }
 
