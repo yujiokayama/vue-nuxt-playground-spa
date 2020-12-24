@@ -1,5 +1,5 @@
 /**
-* table of contents
+* フォームモジュール
 * #select
 * #text
 * #textarea
@@ -12,31 +12,67 @@
 /**
 * #select
 */
+@mixin form-select($display: inline, $margin: 0, $padding: 0) {
+  display: $display;
+  margin: $margin;
+  padding: $padding;
+}
 
 /**
 * #text
 */
+@mixin form-text($display: inline, $margin: 0, $padding: 0) {
+  display: $display;
+  margin: $margin;
+  padding: $padding;
+}
 
 /**
 * #textarea
 */
 
-/**
-* #text
-*/
+@mixin form-textarea($display: inline, $margin: 0, $padding: 0) {
+  display: $display;
+  margin: $margin;
+  padding: $padding;
+}
 
 /**
 * #radio
 */
 
+@mixin form-radio($display: inline, $margin: 0, $padding: 0) {
+  display: $display;
+  margin: $margin;
+  padding: $padding;
+}
+
 /**
 * #checkbox
 */
+
+@mixin form-checkbox($display: inline, $margin: 0, $padding: 0) {
+  display: $display;
+  margin: $margin;
+  padding: $padding;
+}
 
 /**
 * #add-item
 */
 
+@mixin form-add-item($display: inline, $margin: 0, $padding: 0) {
+  display: $display;
+  margin: $margin;
+  padding: $padding;
+}
+
 /**
 * #file-upload
 */
+
+@mixin form-file-upload($display: inline, $margin: 0, $padding: 0) {
+  display: $display;
+  margin: $margin;
+  padding: $padding;
+}
