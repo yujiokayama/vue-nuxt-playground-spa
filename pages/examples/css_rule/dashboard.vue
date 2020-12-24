@@ -19,11 +19,11 @@
             </div>
             <div class="card-item-compared">
               <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text _up"
+              <span class="card-item-compared-text-up"
                 >{{ cmsDashBoard.pageView.comparedWeek }}%</span
               >
               <div>
-                <md-icon class="card-item-compared-arrow _up"
+                <md-icon class="card-item-compared-arrow-up"
                   >arrow_upward</md-icon
                 >
               </div>
@@ -42,11 +42,11 @@
             </div>
             <div class="card-item-compared">
               <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text _stay"
+              <span class="card-item-compared-text-stay"
                 >{{ cmsDashBoard.pageView.comparedWeek }}%</span
               >
               <div>
-                <md-icon class="card-item-compared-arrow _right"
+                <md-icon class="card-item-compared-arrow-right"
                   >arrow_forward</md-icon
                 >
               </div>
@@ -65,11 +65,11 @@
             </div>
             <div class="card-item-compared">
               <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text _down"
+              <span class="card-item-compared-text-down"
                 >{{ cmsDashBoard.pageView.comparedWeek }}%</span
               >
               <div>
-                <md-icon class="card-item-compared-arrow _down"
+                <md-icon class="card-item-compared-arrow-down"
                   >arrow_downward</md-icon
                 >
               </div>
@@ -88,11 +88,11 @@
             </div>
             <div class="card-item-compared">
               <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text _up"
+              <span class="card-item-compared-text-up"
                 >{{ cmsDashBoard.pageView.comparedWeek }}%</span
               >
               <div>
-                <md-icon class="card-item-compared-arrow _up"
+                <md-icon class="card-item-compared-arrow-up"
                   >arrow_upward</md-icon
                 >
               </div>
@@ -111,11 +111,11 @@
             </div>
             <div class="card-item-compared">
               <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text _stay"
+              <span class="card-item-compared-text-stay"
                 >{{ cmsDashBoard.pageView.comparedWeek }}%</span
               >
               <div>
-                <md-icon class="card-item-compared-arrow _right"
+                <md-icon class="card-item-compared-arrow-right"
                   >arrow_forward</md-icon
                 >
               </div>
@@ -134,11 +134,11 @@
             </div>
             <div class="card-item-compared">
               <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text _down"
+              <span class="card-item-compared-text-down"
                 >{{ cmsDashBoard.pageView.comparedWeek }}%</span
               >
               <div>
-                <md-icon class="card-item-compared-arrow _down"
+                <md-icon class="card-item-compared-arrow-down"
                   >arrow_downward</md-icon
                 >
               </div>
@@ -156,27 +156,6 @@
       <div class="card">
         <div class="card-box col-8"></div>
         <div class="card-box col-4"></div>
-      </div>
-      <div class="card">
-        <div class="card-box col-12"></div>
-      </div>
-      <div class="card">
-        <div class="card-box col-12"></div>
-      </div>
-      <div class="card">
-        <div class="card-box col-12"></div>
-      </div>
-      <div class="card">
-        <div class="card-box col-12"></div>
-      </div>
-      <div class="card">
-        <div class="card-box col-12"></div>
-      </div>
-      <div class="card">
-        <div class="card-box col-12"></div>
-      </div>
-      <div class="card">
-        <div class="card-box col-12"></div>
       </div>
       <div class="card">
         <div class="card-box col-12"></div>
@@ -351,26 +330,26 @@ export default {
         font-size: 17px;
         font-weight: bold;
         letter-spacing: 0px;
-        &._up {
+        &-up {
           color: #34c759;
         }
-        &._down {
+        &-down {
           color: #ff453a;
         }
-        &._stay {
+        &-stay {
           color: #8a8a8e;
         }
       }
       &-arrow {
-        &._up {
+        &-up {
           margin: 0 0 0 8px;
           color: #34c759;
         }
-        &._right {
+        &-right {
           margin: 0 0 0 8px;
           color: #8a8a8e;
         }
-        &._down {
+        &-down {
           margin: 0 0 0 8px;
           color: #ff453a;
         }
