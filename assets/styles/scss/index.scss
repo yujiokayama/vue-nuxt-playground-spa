@@ -1,2 +1,6 @@
+// reset.scss（各モジュールのmixinを束ねるファイル）
 @import './base/reset';
+// base.scss（各モジュールのmixinを束ねるファイル）
+@import './base/base';
+// moduleディレクトリ（ライブラリ・プラグイン等のCSSを格納するディレクトリ）
 @import './module/vue-material';
