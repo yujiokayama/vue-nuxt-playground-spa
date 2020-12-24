@@ -118,11 +118,6 @@ export default {
     },
   },
 
-  // https://storybook.nuxtjs.org/options
-  storybook: {
-    // Options
-  },
-
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     postcss: {
