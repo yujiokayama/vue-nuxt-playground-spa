@@ -38,7 +38,7 @@ export default {
 
   // SCSSの変数を展開し、全ページから参照できるようにする
   styleResources: {
-    scss: ['~/assets/styles/scss/base/_variables.scss'],
+    scss: ['~/assets/styles/scss/variables/_color.scss'],
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
