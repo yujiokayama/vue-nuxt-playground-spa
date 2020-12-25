@@ -30,6 +30,7 @@ import DraggableComponent from '~/components/examples/draggable/DraggableCompone
 // エディタ
 import TextEditor from '~/components/examples/editor/TextEditor.vue'
 import WysiwygEditor from '~/components/examples/editor/WysiwygEditor.vue'
+import TinyMCE from '~/components/examples/editor/TinyMCE'
 // プログレス
 import ProgressBar from '~/components/examples/progress/ProgressBar.vue'
 import ProgressCircle from '~/components/examples/progress/ProgressCircle.vue'
@@ -60,6 +61,7 @@ export default {
     DraggableComponent,
     TextEditor,
     WysiwygEditor,
+    TinyMCE,
     ProgressBar,
     ProgressCircle,
     SkeletonScreen,

@@ -70,6 +70,10 @@
       {
         "title": "Wysiwygエディタ",
         "path": "/examples/components/WysiwygEditor"
+      },
+      {
+        "title": "TinyMCE",
+        "path": "/examples/components/TinyMCE"
       }
     ]
   },

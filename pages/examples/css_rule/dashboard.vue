@@ -1,167 +1,161 @@
 <template>
-  <div class="dashboard-container">
-    <!-- side -->
-    <div class="side"></div>
-    <!-- /side -->
-    <!-- main -->
-    <div class="main">
-      <!-- blcok start -->
-      <div class="card">
-        <div class="card-box col-4">
-          <div class="card-item">
-            <div class="card-item-data">
-              <dl>
-                <dt class="card-item-data-title">ページビュー数</dt>
-                <dd class="card-item-data-text">
-                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
-                </dd>
-              </dl>
-            </div>
-            <div class="card-item-compared">
-              <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text-up"
-                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
-              >
-              <div>
-                <md-icon class="card-item-compared-arrow-up"
-                  >arrow_upward</md-icon
-                >
-              </div>
+  <div>
+    <div class="row">
+      <div class="col-3">AAA</div>
+      <div class="col-3">AAA</div>
+      <div class="col-3">AAA</div>
+    </div>
+    <div class="card">
+      <div class="card-box col-4">
+        <div class="card-item">
+          <div class="card-item-data">
+            <div class="card-item-data-title">ページビュー数</div>
+            <div class="card-item-data-text">
+              {{ commaSeparate(cmsDashBoard.pageView.view) }}
             </div>
           </div>
-        </div>
-        <div class="card-box col-4">
-          <div class="card-item">
-            <div class="card-item-data">
-              <dl>
-                <dt class="card-item-data-title">ページビュー数</dt>
-                <dd class="card-item-data-text">
-                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
-                </dd>
-              </dl>
-            </div>
-            <div class="card-item-compared">
-              <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text-stay"
-                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+          <div class="card-item-compared">
+            <span class="card-item-compared-title">前週比</span>
+            <span class="card-item-compared-text-up"
+              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+            >
+            <div>
+              <md-icon class="card-item-compared-arrow-up"
+                >arrow_upward</md-icon
               >
-              <div>
-                <md-icon class="card-item-compared-arrow-right"
-                  >arrow_forward</md-icon
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-box col-4">
-          <div class="card-item">
-            <div class="card-item-data">
-              <dl>
-                <dt class="card-item-data-title">ページビュー数</dt>
-                <dd class="card-item-data-text">
-                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
-                </dd>
-              </dl>
-            </div>
-            <div class="card-item-compared">
-              <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text-down"
-                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
-              >
-              <div>
-                <md-icon class="card-item-compared-arrow-down"
-                  >arrow_downward</md-icon
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-box col-4">
-          <div class="card-item">
-            <div class="card-item-data">
-              <dl>
-                <dt class="card-item-data-title">ページビュー数</dt>
-                <dd class="card-item-data-text">
-                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
-                </dd>
-              </dl>
-            </div>
-            <div class="card-item-compared">
-              <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text-up"
-                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
-              >
-              <div>
-                <md-icon class="card-item-compared-arrow-up"
-                  >arrow_upward</md-icon
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-box col-4">
-          <div class="card-item">
-            <div class="card-item-data">
-              <dl>
-                <dt class="card-item-data-title">ページビュー数</dt>
-                <dd class="card-item-data-text">
-                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
-                </dd>
-              </dl>
-            </div>
-            <div class="card-item-compared">
-              <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text-stay"
-                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
-              >
-              <div>
-                <md-icon class="card-item-compared-arrow-right"
-                  >arrow_forward</md-icon
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-box col-4">
-          <div class="card-item">
-            <div class="card-item-data">
-              <dl>
-                <dt class="card-item-data-title">ページビュー数</dt>
-                <dd class="card-item-data-text">
-                  {{ commaSeparate(cmsDashBoard.pageView.view) }}
-                </dd>
-              </dl>
-            </div>
-            <div class="card-item-compared">
-              <span class="card-item-compared-title">前週比</span>
-              <span class="card-item-compared-text-down"
-                >{{ cmsDashBoard.pageView.comparedWeek }}%</span
-              >
-              <div>
-                <md-icon class="card-item-compared-arrow-down"
-                  >arrow_downward</md-icon
-                >
-              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- /blcok end -->
-      <div class="card">
-        <div class="card-box col-12"></div>
+      <div class="card-box col-4">
+        <div class="card-item">
+          <div class="card-item-data">
+            <dl>
+              <dt class="card-item-data-title">ページビュー数</dt>
+              <dd class="card-item-data-text">
+                {{ commaSeparate(cmsDashBoard.pageView.view) }}
+              </dd>
+            </dl>
+          </div>
+          <div class="card-item-compared">
+            <span class="card-item-compared-title">前週比</span>
+            <span class="card-item-compared-text-stay"
+              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+            >
+            <div>
+              <md-icon class="card-item-compared-arrow-right"
+                >arrow_forward</md-icon
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-box col-12"></div>
+      <div class="card-box col-4">
+        <div class="card-item">
+          <div class="card-item-data">
+            <dl>
+              <dt class="card-item-data-title">ページビュー数</dt>
+              <dd class="card-item-data-text">
+                {{ commaSeparate(cmsDashBoard.pageView.view) }}
+              </dd>
+            </dl>
+          </div>
+          <div class="card-item-compared">
+            <span class="card-item-compared-title">前週比</span>
+            <span class="card-item-compared-text-down"
+              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+            >
+            <div>
+              <md-icon class="card-item-compared-arrow-down"
+                >arrow_downward</md-icon
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-box col-8"></div>
-        <div class="card-box col-4"></div>
+      <div class="card-box col-4">
+        <div class="card-item">
+          <div class="card-item-data">
+            <dl>
+              <dt class="card-item-data-title">ページビュー数</dt>
+              <dd class="card-item-data-text">
+                {{ commaSeparate(cmsDashBoard.pageView.view) }}
+              </dd>
+            </dl>
+          </div>
+          <div class="card-item-compared">
+            <span class="card-item-compared-title">前週比</span>
+            <span class="card-item-compared-text-up"
+              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+            >
+            <div>
+              <md-icon class="card-item-compared-arrow-up"
+                >arrow_upward</md-icon
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-box col-12"></div>
+      <div class="card-box col-4">
+        <div class="card-item">
+          <div class="card-item-data">
+            <dl>
+              <dt class="card-item-data-title">ページビュー数</dt>
+              <dd class="card-item-data-text">
+                {{ commaSeparate(cmsDashBoard.pageView.view) }}
+              </dd>
+            </dl>
+          </div>
+          <div class="card-item-compared">
+            <span class="card-item-compared-title">前週比</span>
+            <span class="card-item-compared-text-stay"
+              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+            >
+            <div>
+              <md-icon class="card-item-compared-arrow-right"
+                >arrow_forward</md-icon
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-box col-4">
+        <div class="card-item">
+          <div class="card-item-data">
+            <dl>
+              <dt class="card-item-data-title">ページビュー数</dt>
+              <dd class="card-item-data-text">
+                {{ commaSeparate(cmsDashBoard.pageView.view) }}
+              </dd>
+            </dl>
+          </div>
+          <div class="card-item-compared">
+            <span class="card-item-compared-title">前週比</span>
+            <span class="card-item-compared-text-down"
+              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+            >
+            <div>
+              <md-icon class="card-item-compared-arrow-down"
+                >arrow_downward</md-icon
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- /main -->
+    <div class="card">
+      <div class="card-box col-12"></div>
+    </div>
+    <div class="card">
+      <div class="card-box col-12"></div>
+    </div>
+    <div class="card">
+      <div class="card-box col-8"></div>
+      <div class="card-box col-4"></div>
+    </div>
+    <div class="card">
+      <div class="card-box col-12"></div>
+    </div>
   </div>
 </template>
 
@@ -202,21 +196,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/**
-  /////////////////////////////////////////////
-  基本ルール
-  ・
-  ・必要最低限のSCSS（アンパサンド、ネステッドルール、ミックスイン、インクルード、for、変数、パーシャルくらい？）
-  /////////////////////////////////////////////
-  */
-
-/**
-  * コンポーネントはmixinでデフォルトを定義しておく
-  * 名前空間を付ける(ケバブケース：最大3ハイフンくらい)
-  * 例）
-  * ■コンポーネント
-  * component-コンポーネント名-[ディティール名]
-  */
+@mixin grid-layout($column-gap: 16px, $row-gap: 16px) {
+  display: grid;
+  grid-template-columns: repeat(12, calc(100% / 12 - #{$column-gap}));
+  grid-column-gap: $column-gap;
+  grid-row-gap: $row-gap;
+}
 
 @mixin component-card($margin: 0, $padding: 0) {
   margin: $margin;
@@ -227,56 +212,31 @@ export default {
   opacity: 1;
 }
 
-/**
-  *■グリッドレイアウトについて
-  *css gridを採用（12グリッド、ガーター指定など）
-  */
-@mixin grid-layout($column-gap: 16px, $row-gap: 16px) {
-  display: grid;
-  grid-template-columns: repeat(12, calc(100% / 12 - #{$column-gap}));
-  grid-column-gap: $column-gap;
-  grid-row-gap: $row-gap;
-}
-
-/**
-  これを参考に
-  https://tsudoi.org/guide/detail/2.html
-  BEMの概念を取り入れる
-  ブロック内の要素のクラス名が冗長にはなるが、基本的にはマルチクラスではなくシングルクラスで記述したい（マルチクラスすぎると予測や管理が煩雑になるため）
-  Block-Element-Modifier
-  [大枠]-[大枠中に属する要素]-[バリエーションや状態など]
-  Modifierはアンダースコアを付与して命名
-  例）ボタンの赤いバージョン
-  <button class="button _red"></button>
-  */
-
-.dashboard-container {
+.row {
   display: flex;
-  min-width: 1366px;
-  margin: 20px auto 0;
-}
-.side {
-  position: fixed;
-  width: 250px;
-  height: 100vh;
-  border: 1px solid #ebeced;
-  background-color: #8a8a8e;
-  z-index: 100;
-}
-.main {
-  position: relative;
-  width: calc(100% - 250px);
-  left: 258px;
-  padding: 0 40px;
+  flex-wrap: wrap;
+  margin: 0 -16px 0 0;
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      width: calc(100% / #{$i} - 16px);
+      margin: 0 16px 0 0;
+      padding: 32px 26px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 1px 5px #d6d6d6;
+      border-radius: 6px;
+      opacity: 1;
+    }
+  }
 }
 
 /**
   * カードコンポーネントの例
   */
 .card {
+  margin: 0 -16px 0 0;
   @include grid-layout();
   &:not(:first-child) {
-    margin: 24px 0 0 0;
+    margin: 24px -16px 0 0;
   }
   @for $index from 1 through 12 {
     .col-#{$index} {
@@ -290,6 +250,7 @@ export default {
     display: flex;
     align-items: center;
     &-data {
+      width: 50%;
       &-title {
         width: 119px;
         height: 25px;
@@ -313,6 +274,7 @@ export default {
     }
     &-compared {
       display: flex;
+      width: 50%;
       align-items: center;
       margin: 0 0 0 20px;
       &-title {
