@@ -2,10 +2,10 @@
   <div>
     <div v-html="editorValue"></div>
     <editor
-      v-model="editorValue"
       ref="editor"
+      v-model="editorValue"
       :api-key="apikey"
-      :initialValue="initialValue"
+      :initial-value="initialValue"
       :init="init"
     ></editor>
   </div>

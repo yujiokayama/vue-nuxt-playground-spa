@@ -4,7 +4,7 @@
     <pagination
       :contents="contents"
       :limit="limit"
-      :totalCount="totalCount"
+      :total-count="totalCount"
       :offset="offset"
     />
   </div>

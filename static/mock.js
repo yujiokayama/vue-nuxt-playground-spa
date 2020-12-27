@@ -11,9 +11,9 @@ const faker = require('faker')
 // const db = {
 //   xxx: []
 // }
-let db = []
+const db = []
 
-let mockLength = 100
+const mockLength = 100
 
 /**
  * 企業一覧サンプル
