@@ -1,10 +1,5 @@
 <template>
   <div>
-    <div class="row">
-      <div class="col-3">AAA</div>
-      <div class="col-3">AAA</div>
-      <div class="col-3">AAA</div>
-    </div>
     <div class="card">
       <div class="card-box col-4">
         <div class="card-item">
@@ -210,23 +205,6 @@ export default {
   box-shadow: 0px 1px 5px #d6d6d6;
   border-radius: 6px;
   opacity: 1;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -16px 0 0;
-  @for $i from 1 through 12 {
-    .col-#{$i} {
-      width: calc(100% / #{$i} - 16px);
-      margin: 0 16px 0 0;
-      padding: 32px 26px;
-      background: #ffffff 0% 0% no-repeat padding-box;
-      box-shadow: 0px 1px 5px #d6d6d6;
-      border-radius: 6px;
-      opacity: 1;
-    }
-  }
 }
 
 /**
