@@ -17,7 +17,7 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/style-resources": "^1.0.0",
-    "@tinymce/tinymce-vue": "^4.0.0",
+    "@tinymce/tinymce-vue": "^3.0.0",
     "add": "^2.0.6",
     "core-js": "^3.6.5",
     "highcharts": "^8.2.2",

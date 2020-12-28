@@ -156,7 +156,6 @@
 
 <script>
 export default {
-  layout: 'dashboard',
   async asyncData({ $api }) {
     return {
       cmsDashBoard: await $api.getAPI('/apis/dashboaard.json'),

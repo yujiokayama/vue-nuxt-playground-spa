@@ -44,6 +44,8 @@ import Pagination from '~/components/examples/pagination/Pagination.vue'
 import Trello from '~/components/examples/task/Trello.vue'
 // CRUD
 import CRUD from '~/components/examples/crud/CRUD.vue'
+// Vueの基礎
+import EmitAndProps from '~/components/examples/vue/EmitAndProps.vue'
 
 export default {
   components: {
@@ -69,6 +71,7 @@ export default {
     Pagination,
     Trello,
     CRUD,
+    EmitAndProps,
   },
   asyncData({ route, app }) {
     return {

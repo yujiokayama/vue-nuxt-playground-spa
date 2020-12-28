@@ -142,22 +142,22 @@
     ]
   },
   {
-    "name": "レイアウト",
-    "slug": "layout",
-    "components": [
-      {
-        "title": "リキッドレイアウト",
-        "path": "/examples/template/liquid"
-      }
-    ]
-  },
-  {
     "name": "CSSガイド",
     "slug": "css_rule",
     "components": [
       {
         "title": "ダッシュボードレイアウト",
         "path": "/examples/css_rule/dashboard"
+      }
+    ]
+  },
+  {
+    "name": "Vue基礎",
+    "slug": "vue_basic",
+    "components": [
+      {
+        "title": "$emitとprops",
+        "path": "/examples/components/EmitAndProps"
       }
     ]
   }

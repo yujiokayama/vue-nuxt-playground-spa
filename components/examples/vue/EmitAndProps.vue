@@ -1,13 +1,27 @@
 <template>
-  <div>emit</div>
+  <div>
+    <p>parent_num: {{ parent_num }}</p>
+    <button @click="onClick($event)">on</button>
+    <EmitAndPropsChild @my-click="parent_num = $event" />
+  </div>
 </template>
 <script>
+import EmitAndPropsChild from '@/components/examples/vue/modules/EmitAndPropsChild.vue'
 export default {
+  components: {
+    EmitAndPropsChild,
+  },
   data() {
-    return {}
+    return {
+      parent_num: 100,
+    }
   },
   mounted() {},
-  methods: {},
+  methods: {
+    onClick($event) {
+      alert($event.target.textContent)
+    },
+  },
 }
 </script>
 
