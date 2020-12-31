@@ -1,42 +1,72 @@
 <template>
   <div>
+    {{ periodData }}
+    <div class="data-past">
+      <span class="data-past-title"
+        >過去{{ selectedPeriodTitle }}のデータ
+        <md-icon class="data-past-title-icon">push_pin</md-icon></span
+      >
+      <div>
+        <div class="data-past-btn">
+          <input
+            v-for="period in periodList"
+            :id="period.title_en"
+            :key="period.title_en"
+            ref="dataPastCheck"
+            v-model="checkedPeriod"
+            @change="getPeriodData(checkedPeriod)"
+            @click="radioCheckRemove($event)"
+            :class="['data-past-btn-radio']"
+            type="radio"
+            name="period"
+            :value="period.title_en"
+          />
+          <label
+            v-for="period in periodList"
+            :key="period.title_ja"
+            :for="period.title_en"
+            :class="[
+              'data-past-btn-label',
+              { 'is-checked': checkedPeriod === period.title_en },
+            ]"
+            >{{ period.title_ja }}</label
+          >
+        </div>
+      </div>
+    </div>
     <div class="card">
-      <div class="card-box col-4">
+      <!-- <div class="card-box col-4">
         <div class="card-item">
           <div class="card-item-data">
             <div class="card-item-data-title">ページビュー数</div>
             <div class="card-item-data-text">
-              {{ commaSeparate(cmsDashBoard.pageView.view) }}
+              {{ commaSeparate(periodData.pageView.view) }}
             </div>
           </div>
           <div class="card-item-compared">
             <span class="card-item-compared-title">前週比</span>
             <span class="card-item-compared-text-up"
-              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
+              >{{ periodData.pageView.comparedWeek }}%</span
             >
             <div>
-              <md-icon class="card-item-compared-arrow-up"
-                >arrow_upward</md-icon
-              >
+              <md-icon class="card-item-compared-arrow-up">{{
+                stateArrow(periodData.pageView.state)
+              }}</md-icon>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="card-box col-4">
         <div class="card-item">
           <div class="card-item-data">
             <dl>
               <dt class="card-item-data-title">ページビュー数</dt>
-              <dd class="card-item-data-text">
-                {{ commaSeparate(cmsDashBoard.pageView.view) }}
-              </dd>
+              <dd class="card-item-data-text">{{}}</dd>
             </dl>
           </div>
           <div class="card-item-compared">
             <span class="card-item-compared-title">前週比</span>
-            <span class="card-item-compared-text-stay"
-              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
-            >
+            <span class="card-item-compared-text-stay">{{}}%</span>
             <div>
               <md-icon class="card-item-compared-arrow-right"
                 >arrow_forward</md-icon
@@ -50,16 +80,12 @@
           <div class="card-item-data">
             <dl>
               <dt class="card-item-data-title">ページビュー数</dt>
-              <dd class="card-item-data-text">
-                {{ commaSeparate(cmsDashBoard.pageView.view) }}
-              </dd>
+              <dd class="card-item-data-text">{{}}</dd>
             </dl>
           </div>
           <div class="card-item-compared">
             <span class="card-item-compared-title">前週比</span>
-            <span class="card-item-compared-text-down"
-              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
-            >
+            <span class="card-item-compared-text-down">{{}}%</span>
             <div>
               <md-icon class="card-item-compared-arrow-down"
                 >arrow_downward</md-icon
@@ -73,16 +99,12 @@
           <div class="card-item-data">
             <dl>
               <dt class="card-item-data-title">ページビュー数</dt>
-              <dd class="card-item-data-text">
-                {{ commaSeparate(cmsDashBoard.pageView.view) }}
-              </dd>
+              <dd class="card-item-data-text">{{}}</dd>
             </dl>
           </div>
           <div class="card-item-compared">
             <span class="card-item-compared-title">前週比</span>
-            <span class="card-item-compared-text-up"
-              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
-            >
+            <span class="card-item-compared-text-up">{{}}%</span>
             <div>
               <md-icon class="card-item-compared-arrow-up"
                 >arrow_upward</md-icon
@@ -96,16 +118,12 @@
           <div class="card-item-data">
             <dl>
               <dt class="card-item-data-title">ページビュー数</dt>
-              <dd class="card-item-data-text">
-                {{ commaSeparate(cmsDashBoard.pageView.view) }}
-              </dd>
+              <dd class="card-item-data-text">{{}}</dd>
             </dl>
           </div>
           <div class="card-item-compared">
             <span class="card-item-compared-title">前週比</span>
-            <span class="card-item-compared-text-stay"
-              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
-            >
+            <span class="card-item-compared-text-stay">{{}}%</span>
             <div>
               <md-icon class="card-item-compared-arrow-right"
                 >arrow_forward</md-icon
@@ -119,16 +137,12 @@
           <div class="card-item-data">
             <dl>
               <dt class="card-item-data-title">ページビュー数</dt>
-              <dd class="card-item-data-text">
-                {{ commaSeparate(cmsDashBoard.pageView.view) }}
-              </dd>
+              <dd class="card-item-data-text">{{}}</dd>
             </dl>
           </div>
           <div class="card-item-compared">
             <span class="card-item-compared-title">前週比</span>
-            <span class="card-item-compared-text-down"
-              >{{ cmsDashBoard.pageView.comparedWeek }}%</span
-            >
+            <span class="card-item-compared-text-down">{{}}%</span>
             <div>
               <md-icon class="card-item-compared-arrow-down"
                 >arrow_downward</md-icon
@@ -139,51 +153,144 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-box col-12"></div>
+      <div class="card-box col-12">
+        <span>アナリティクス</span>
+      </div>
     </div>
     <div class="card">
-      <div class="card-box col-12"></div>
+      <div class="card-box col-8">
+        <span>集客</span>
+      </div>
+      <div class="card-box col-4">
+        <span>デバイス別セッション数</span>
+      </div>
     </div>
     <div class="card">
-      <div class="card-box col-8"></div>
-      <div class="card-box col-4"></div>
-    </div>
-    <div class="card">
-      <div class="card-box col-12"></div>
+      <div class="card-box col-12">
+        <table>
+          <thead>
+            <th>head</th>
+          </thead>
+          <tbody>
+            <tr>
+              body
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  layout: 'dashboard',
+  data() {
+    return {
+      checkedPeriod: '',
+      periodData: this.dashBoardData,
+      periodList: [
+        {
+          title_en: 'days7',
+          title_ja: '7日間',
+        },
+        {
+          title_en: 'month1',
+          title_ja: '1ヶ月',
+        },
+        {
+          title_en: 'month3',
+          title_ja: '3ヶ月',
+        },
+      ],
+    }
+  },
   async asyncData({ $api }) {
     return {
-      cmsDashBoard: await $api.getAPI('/apis/dashboaard.json'),
+      dashBoardData: await $api.getAPI('/apis/dashboaard_days7.json'),
     }
   },
   computed: {
-    dataBlock1() {
-      const {
-        pageView,
-        uniqueUser,
-        bounceRate,
-        conversionRate,
-        stayTime,
-        newUser,
-      } = this.cmsDashBoard
-      return [
-        pageView,
-        uniqueUser,
-        bounceRate,
-        conversionRate,
-        stayTime,
-        newUser,
-      ]
+    /**
+     * 選択している期間のタイトル
+     */
+    selectedPeriodTitle() {
+      const selectedPeriod = this.periodList.filter((data) => {
+        return data.title_en.match(this.checkedPeriod)
+      })
+      return selectedPeriod[0].title_ja
+    },
+    /**
+     * 矢印の向きを算出する
+     */
+    stateArrow() {
+      return (state) => {
+        let arrow = null
+        switch (state) {
+          case 'up':
+            arrow = 'arrow_upward'
+            break
+          case 'down':
+            arrow = 'arrow_downward'
+            break
+          case 'stay':
+            arrow = 'arrow_forward'
+            break
+          default:
+            arrow = 'home'
+            break
+        }
+        return arrow
+      }
     },
   },
+  created() {},
+  mounted() {
+    // デフォルトで7日間のラジオボタンをチェック状態にする
+    this.$refs.dataPastCheck[0].checked = true
+    // デフォルトで7日間のラジオボタンの値を代入する
+    this.checkedPeriod = this.$refs.dataPastCheck[0].value
+    // デフォルトで表示するデータを取得する
+    this.getPeriodData(this.checkedPeriod)
+  },
   methods: {
+    /**
+     * 表示するデータの範囲
+     * @param {string} period
+     */
+    async getPeriodData(period) {
+      this.periodData = await this.$api.getAPI(
+        `/apis/dashboaard_${period}.json`
+      )
+    },
+    /**
+     * カンマ区切りにする
+     * @param {number} num
+     */
     commaSeparate(num) {
       return this.$common.commaSeparate(num)
+    },
+    /**
+     * 選択したの期間のデータを返す
+     * @param {string} period
+     */
+    // changePeriod(period) {
+    //   const periodData = Object.values(this.dashBoardData).filter((data) => {
+    //     return data.title_ja.match(period)
+    //   })
+    //   this.periodData = periodData[0]
+    // },
+    /**
+     * 二回クリックでラジオのチェックを外す
+     * @param {string} radio
+     */
+    radioCheckRemove(radio) {
+      if (this.checkedPeriod === radio.value) {
+        radio.checked = false
+        this.checkedPeriod = ''
+      } else {
+        this.checkedPeriod = radio.value
+      }
     },
   },
 }
@@ -207,7 +314,7 @@ export default {
 }
 
 /**
-  * カードコンポーネントの例
+  * card
   */
 .card {
   margin: 0 -16px 0 0;
@@ -293,6 +400,62 @@ export default {
           color: #ff453a;
         }
       }
+    }
+  }
+}
+.data-past {
+  display: flex;
+  & > * {
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+  &-title {
+    font-size: 22px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #1e1e1e;
+    opacity: 1;
+    &-icon {
+      transform: rotate(30deg);
+    }
+  }
+  &-btn {
+    display: flex;
+    &-radio {
+      display: none;
+    }
+    &-label {
+      display: block;
+      cursor: pointer;
+      width: calc(198px / 3);
+      height: 32px;
+      line-height: 1.3;
+      margin: 0;
+      padding: 7px 5px;
+      border: 1px solid #e0e0e0;
+      background: #fff;
+      color: #1e1e1e;
+      font-size: 13px;
+      text-align: center;
+      transition: 0.2s;
+      &:first-of-type {
+        border: 1px solid #e0e0e0;
+        border-right: none;
+        border-radius: 4px 0 0 4px;
+      }
+      &:last-of-type {
+        border: 1px solid #e0e0e0;
+        border-left: none;
+        border-radius: 0 4px 4px 0;
+      }
+    }
+    .is-checked {
+      border: 1px solid #e0e0e0;
+      border-right: none;
+      border-left: none;
+      background-color: #4f7df0;
+      color: #fff;
     }
   }
 }

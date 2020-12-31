@@ -1,27 +1,35 @@
 {
+  "title_en": "month1",
+  "title_ja": "1ヶ月",
   "pageView": {
-    "view": 1000,
-    "comparedWeek": "1.08"
+    "view": 2000,
+    "comparedWeek": "1.08",
+    "state": "up"
   },
   "uniqueUser": {
     "user": 100,
-    "comparedWeek": "1.08"
+    "comparedWeek": "1.08",
+    "state": "down"
   },
   "bounceRate": {
     "rate": 78,
-    "comparedWeek": "1.08"
+    "comparedWeek": "1.08",
+    "state": "stay"
   },
   "conversionRate": {
     "rate": 11.45,
-    "comparedWeek": "1.08"
+    "comparedWeek": "1.08",
+    "state": "stay"
   },
   "stayTime": {
     "time": "00:01:09",
-    "comparedWeek": "1.08"
+    "comparedWeek": "1.08",
+    "state": "stay"
   },
   "newUser": {
     "user": 10,
-    "comparedWeek": "1.08"
+    "comparedWeek": "1.08",
+    "state": "stay"
   },
   "analytics": {
     "prev": 10,

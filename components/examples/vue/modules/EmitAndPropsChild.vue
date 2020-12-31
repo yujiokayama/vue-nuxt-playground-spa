@@ -6,11 +6,6 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      child_num: 0,
-    }
-  },
   props: {
     text: {
       type: String,
@@ -24,6 +19,11 @@ export default {
       },
       required: false,
     },
+  },
+  data() {
+    return {
+      child_num: 0,
+    }
   },
   mounted() {},
   methods: {

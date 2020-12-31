@@ -3,7 +3,7 @@ export default function ({ $axios }, inject) {
     /**
      * Get
      * @param {url} string URI
-     * @param {params} object クエリ
+     * @param {params} object パラメータ
      */
     async getAPI(url, params) {
       const headers = {
