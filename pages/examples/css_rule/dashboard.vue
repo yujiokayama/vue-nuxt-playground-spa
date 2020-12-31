@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{ periodData }}
     <div class="data-past">
       <span class="data-past-title"
         >過去{{ selectedPeriodTitle }}のデータ
@@ -35,27 +34,23 @@
       </div>
     </div>
     <div class="card">
-      <!-- <div class="card-box col-4">
+      <div class="card-box col-4">
         <div class="card-item">
           <div class="card-item-data">
             <div class="card-item-data-title">ページビュー数</div>
             <div class="card-item-data-text">
-              {{ commaSeparate(periodData.pageView.view) }}
+              {{ commaSeparate(dashBoardData.pageView.view) }}
             </div>
           </div>
           <div class="card-item-compared">
             <span class="card-item-compared-title">前週比</span>
             <span class="card-item-compared-text-up"
-              >{{ periodData.pageView.comparedWeek }}%</span
+              >{{ dashBoardData.pageView.comparedWeek }}%</span
             >
-            <div>
-              <md-icon class="card-item-compared-arrow-up">{{
-                stateArrow(periodData.pageView.state)
-              }}</md-icon>
-            </div>
+            <div v-html="stateArrow(dashBoardData.pageView.state)"></div>
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="card-box col-4">
         <div class="card-item">
           <div class="card-item-data">
@@ -206,6 +201,7 @@ export default {
     }
   },
   async asyncData({ $api }) {
+    // デフォルトで表示するデータを取得する
     return {
       dashBoardData: await $api.getAPI('/apis/dashboaard_days7.json'),
     }
@@ -228,30 +224,29 @@ export default {
         let arrow = null
         switch (state) {
           case 'up':
-            arrow = 'arrow_upward'
+            arrow =
+              '<md-icon class="card-item-compared-arrow-up">arrow_upward</md-icon>'
             break
           case 'down':
-            arrow = 'arrow_downward'
+            arrow =
+              '<md-icon class="card-item-compared-arrow-downward">arrow_downward</md-icon>'
             break
           case 'stay':
-            arrow = 'arrow_forward'
+            arrow =
+              '<md-icon class="card-item-compared-arrow-forward">arrow_forward</md-icon>'
             break
           default:
-            arrow = 'home'
             break
         }
         return arrow
       }
     },
   },
-  created() {},
   mounted() {
     // デフォルトで7日間のラジオボタンをチェック状態にする
     this.$refs.dataPastCheck[0].checked = true
     // デフォルトで7日間のラジオボタンの値を代入する
     this.checkedPeriod = this.$refs.dataPastCheck[0].value
-    // デフォルトで表示するデータを取得する
-    this.getPeriodData(this.checkedPeriod)
   },
   methods: {
     /**
@@ -259,7 +254,7 @@ export default {
      * @param {string} period
      */
     async getPeriodData(period) {
-      this.periodData = await this.$api.getAPI(
+      this.dashBoardData = await this.$api.getAPI(
         `/apis/dashboaard_${period}.json`
       )
     },
@@ -449,13 +444,13 @@ export default {
         border-left: none;
         border-radius: 0 4px 4px 0;
       }
-    }
-    .is-checked {
-      border: 1px solid #e0e0e0;
-      border-right: none;
-      border-left: none;
-      background-color: #4f7df0;
-      color: #fff;
+      &.is-checked {
+        border: 1px solid #e0e0e0;
+        border-right: none;
+        border-left: none;
+        background-color: #4f7df0;
+        color: #fff;
+      }
     }
   }
 }
