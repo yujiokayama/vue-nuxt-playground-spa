@@ -511,14 +511,41 @@ export default {
         &-upward {
           margin: 0 0 0 8px;
           color: #34c759;
+          animation: 0.2s ease 0s 1 normal none running arrow_anime_upward;
         }
         &-forward {
           margin: 0 0 0 8px;
           color: #8a8a8e;
+          animation: 0.2s ease 0s 1 normal none running arrow_anime_forward;
         }
         &-downward {
           margin: 0 0 0 8px;
           color: #ff453a;
+          animation: 0.2s ease 0s 1 normal none running arrow_anime_downward;
+        }
+      }
+      @keyframes arrow_anime_upward {
+        0% {
+          transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      @keyframes arrow_anime_forward {
+        0% {
+          transform: translateX(-10px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+      @keyframes arrow_anime_downward {
+        0% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
         }
       }
     }
