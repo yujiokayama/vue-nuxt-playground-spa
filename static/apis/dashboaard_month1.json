@@ -7,29 +7,29 @@
     "state": "stay"
   },
   "uniqueUser": {
-    "user": 100,
+    "user":500,
+    "comparedWeek": "1.08",
+    "state": "up"
+  },
+  "bounceRate": {
+    "rate": 99,
     "comparedWeek": "1.08",
     "state": "down"
   },
-  "bounceRate": {
-    "rate": 78,
-    "comparedWeek": "1.08",
-    "state": "stay"
-  },
   "conversionRate": {
-    "rate": 11.45,
+    "rate": 89.45,
     "comparedWeek": "1.08",
-    "state": "stay"
+    "state": "up"
   },
   "stayTime": {
-    "time": "00:01:09",
-    "comparedWeek": "1.08",
-    "state": "stay"
+    "time": "0051:09",
+    "comparedWeek": "83.08",
+    "state": "up"
   },
   "newUser": {
-    "user": 10,
+    "user": 1090,
     "comparedWeek": "1.08",
-    "state": "stay"
+    "state": "up"
   },
   "analytics": {
     "prev": 10,
