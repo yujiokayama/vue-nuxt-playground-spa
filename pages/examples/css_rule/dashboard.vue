@@ -13,12 +13,12 @@
             :key="period.title_en"
             ref="dataPastCheck"
             v-model="checkedPeriod"
-            @change="getPeriodData(checkedPeriod)"
-            @click="radioCheckRemove($event)"
             :class="['data-past-btn-radio']"
             type="radio"
             name="period"
             :value="period.title_en"
+            @change="getPeriodData(checkedPeriod)"
+            @click="radioCheckRemove($event)"
           />
           <label
             v-for="period in periodList"
@@ -36,37 +36,37 @@
     <div class="card">
       <!-- box -->
       <div class="card-box col-4">
-        <div class="card-item">
-          <div class="card-item-data">
-            <div class="card-item-data-title">ページビュー数</div>
-            <div class="card-item-data-text">
+        <div class="page-view">
+          <div class="page-view-data">
+            <div class="page-view-data-title">ページビュー数</div>
+            <div class="page-view-data-text">
               {{ commaSeparate(dashBoardData.pageView.view) }}
             </div>
           </div>
-          <div class="card-item-compared">
-            <span class="card-item-compared-title">前週比</span>
+          <div class="page-view-compared">
+            <span class="page-view-compared-title">前週比</span>
             <span
               :class="{
-                'card-item-compared-text-up':
+                'page-view-compared-text-up':
                   dashBoardData.pageView.state === 'up',
-                'card-item-compared-text-down':
+                'page-view-compared-text-down':
                   dashBoardData.pageView.state === 'down',
-                'card-item-compared-text-stay':
+                'page-view-compared-text-stay':
                   dashBoardData.pageView.state === 'stay',
               }"
               >{{ dashBoardData.pageView.comparedWeek }}%</span
             >
             <div>
               <md-icon
-                v-html="stateArrow(dashBoardData.pageView.state)"
                 :class="{
-                  'card-item-compared-arrow-upward':
+                  'page-view-compared-arrow-upward':
                     dashBoardData.pageView.state === 'up',
-                  'card-item-compared-arrow-downward':
+                  'page-view-compared-arrow-downward':
                     dashBoardData.pageView.state === 'down',
-                  'card-item-compared-arrow-forward':
+                  'page-view-compared-arrow-forward':
                     dashBoardData.pageView.state === 'stay',
                 }"
+                v-html="stateArrow(dashBoardData.pageView.state)"
               >
               </md-icon>
             </div>
@@ -76,37 +76,37 @@
       <!-- /box -->
       <!-- box -->
       <div class="card-box col-4">
-        <div class="card-item">
-          <div class="card-item-data">
-            <div class="card-item-data-title">ユニークユーザー</div>
-            <div class="card-item-data-text">
+        <div class="unique-user">
+          <div class="unique-user-data">
+            <div class="unique-user-data-title">ユニークユーザー</div>
+            <div class="unique-user-data-text">
               {{ commaSeparate(dashBoardData.uniqueUser.user) }}
             </div>
           </div>
-          <div class="card-item-compared">
-            <span class="card-item-compared-title">前週比</span>
+          <div class="unique-user-compared">
+            <span class="unique-user-compared-title">前週比</span>
             <span
               :class="{
-                'card-item-compared-text-up':
+                'unique-user-compared-text-up':
                   dashBoardData.uniqueUser.state === 'up',
-                'card-item-compared-text-down':
+                'unique-user-compared-text-down':
                   dashBoardData.uniqueUser.state === 'down',
-                'card-item-compared-text-stay':
+                'unique-user-compared-text-stay':
                   dashBoardData.uniqueUser.state === 'stay',
               }"
               >{{ dashBoardData.uniqueUser.comparedWeek }}%</span
             >
             <div>
               <md-icon
-                v-html="stateArrow(dashBoardData.uniqueUser.state)"
                 :class="{
-                  'card-item-compared-arrow-upward':
+                  'unique-user-compared-arrow-upward':
                     dashBoardData.uniqueUser.state === 'up',
-                  'card-item-compared-arrow-downward':
+                  'unique-user-compared-arrow-downward':
                     dashBoardData.uniqueUser.state === 'down',
-                  'card-item-compared-arrow-forward':
+                  'unique-user-compared-arrow-forward':
                     dashBoardData.uniqueUser.state === 'stay',
                 }"
+                v-html="stateArrow(dashBoardData.uniqueUser.state)"
               >
               </md-icon>
             </div>
@@ -116,37 +116,37 @@
       <!-- /box -->
       <!-- box -->
       <div class="card-box col-4">
-        <div class="card-item">
-          <div class="card-item-data">
-            <div class="card-item-data-title">直帰率</div>
-            <div class="card-item-data-text">
+        <div class="bounce-rate">
+          <div class="bounce-rate-data">
+            <div class="bounce-rate-data-title">直帰率</div>
+            <div class="bounce-rate-data-text">
               {{ commaSeparate(dashBoardData.bounceRate.rate) }}%
             </div>
           </div>
-          <div class="card-item-compared">
-            <span class="card-item-compared-title">前週比</span>
+          <div class="bounce-rate-compared">
+            <span class="bounce-rate-compared-title">前週比</span>
             <span
               :class="{
-                'card-item-compared-text-up':
+                'bounce-rate-compared-text-up':
                   dashBoardData.bounceRate.state === 'up',
-                'card-item-compared-text-down':
+                'bounce-rate-compared-text-down':
                   dashBoardData.bounceRate.state === 'down',
-                'card-item-compared-text-stay':
+                'bounce-rate-compared-text-stay':
                   dashBoardData.bounceRate.state === 'stay',
               }"
               >{{ dashBoardData.bounceRate.comparedWeek }}%</span
             >
             <div>
               <md-icon
-                v-html="stateArrow(dashBoardData.bounceRate.state)"
                 :class="{
-                  'card-item-compared-arrow-upward':
+                  'bounce-rate-compared-arrow-upward':
                     dashBoardData.bounceRate.state === 'up',
-                  'card-item-compared-arrow-downward':
+                  'bounce-rate-compared-arrow-downward':
                     dashBoardData.bounceRate.state === 'down',
-                  'card-item-compared-arrow-forward':
+                  'bounce-rate-compared-arrow-forward':
                     dashBoardData.bounceRate.state === 'stay',
                 }"
+                v-html="stateArrow(dashBoardData.bounceRate.state)"
               >
               </md-icon>
             </div>
@@ -156,37 +156,37 @@
       <!-- /box -->
       <!-- box -->
       <div class="card-box col-4">
-        <div class="card-item">
-          <div class="card-item-data">
-            <div class="card-item-data-title">コンバージョン率</div>
-            <div class="card-item-data-text">
+        <div class="conversion-rate">
+          <div class="conversion-rate-data">
+            <div class="conversion-rate-data-title">コンバージョン率</div>
+            <div class="conversion-rate-data-text">
               {{ commaSeparate(dashBoardData.conversionRate.rate) }}%
             </div>
           </div>
-          <div class="card-item-compared">
-            <span class="card-item-compared-title">前週比</span>
+          <div class="conversion-rate-compared">
+            <span class="conversion-rate-compared-title">前週比</span>
             <span
               :class="{
-                'card-item-compared-text-up':
+                'conversion-rate-compared-text-up':
                   dashBoardData.conversionRate.state === 'up',
-                'card-item-compared-text-down':
+                'conversion-rate-compared-text-down':
                   dashBoardData.conversionRate.state === 'down',
-                'card-item-compared-text-stay':
+                'conversion-rate-compared-text-stay':
                   dashBoardData.conversionRate.state === 'stay',
               }"
               >{{ dashBoardData.conversionRate.comparedWeek }}%</span
             >
             <div>
               <md-icon
-                v-html="stateArrow(dashBoardData.conversionRate.state)"
                 :class="{
-                  'card-item-compared-arrow-upward':
+                  'conversion-rate-compared-arrow-upward':
                     dashBoardData.conversionRate.state === 'up',
-                  'card-item-compared-arrow-downward':
+                  'conversion-rate-compared-arrow-downward':
                     dashBoardData.conversionRate.state === 'down',
-                  'card-item-compared-arrow-forward':
+                  'conversion-rate-compared-arrow-forward':
                     dashBoardData.conversionRate.state === 'stay',
                 }"
+                v-html="stateArrow(dashBoardData.conversionRate.state)"
               >
               </md-icon>
             </div>
@@ -196,37 +196,37 @@
       <!-- /box -->
       <!-- box -->
       <div class="card-box col-4">
-        <div class="card-item">
-          <div class="card-item-data">
-            <div class="card-item-data-title">平均滞在時間</div>
-            <div class="card-item-data-text">
+        <div class="average-stay-time">
+          <div class="average-stay-time-data">
+            <div class="average-stay-time-data-title">平均滞在時間</div>
+            <div class="average-stay-time-data-text">
               {{ commaSeparate(dashBoardData.stayTime.time) }}
             </div>
           </div>
-          <div class="card-item-compared">
-            <span class="card-item-compared-title">前週比</span>
+          <div class="average-stay-time-compared">
+            <span class="average-stay-time-compared-title">前週比</span>
             <span
               :class="{
-                'card-item-compared-text-up':
+                'average-stay-time-compared-text-up':
                   dashBoardData.stayTime.state === 'up',
-                'card-item-compared-text-down':
+                'average-stay-time-compared-text-down':
                   dashBoardData.stayTime.state === 'down',
-                'card-item-compared-text-stay':
+                'average-stay-time-compared-text-stay':
                   dashBoardData.stayTime.state === 'stay',
               }"
               >{{ dashBoardData.stayTime.comparedWeek }}%</span
             >
             <div>
               <md-icon
-                v-html="stateArrow(dashBoardData.stayTime.state)"
                 :class="{
-                  'card-item-compared-arrow-upward':
+                  'average-stay-time-compared-arrow-upward':
                     dashBoardData.stayTime.state === 'up',
-                  'card-item-compared-arrow-downward':
+                  'average-stay-time-compared-arrow-downward':
                     dashBoardData.stayTime.state === 'down',
-                  'card-item-compared-arrow-forward':
+                  'average-stay-time-compared-arrow-forward':
                     dashBoardData.stayTime.state === 'stay',
                 }"
+                v-html="stateArrow(dashBoardData.stayTime.state)"
               >
               </md-icon>
             </div>
@@ -236,37 +236,37 @@
       <!-- /box -->
       <!-- box -->
       <div class="card-box col-4">
-        <div class="card-item">
-          <div class="card-item-data">
-            <div class="card-item-data-title">新規ユーザー</div>
-            <div class="card-item-data-text">
+        <div class="new-user">
+          <div class="new-user-data">
+            <div class="new-user-data-title">新規ユーザー</div>
+            <div class="new-user-data-text">
               {{ commaSeparate(dashBoardData.newUser.user) }}
             </div>
           </div>
-          <div class="card-item-compared">
-            <span class="card-item-compared-title">前週比</span>
+          <div class="new-user-compared">
+            <span class="new-user-compared-title">前週比</span>
             <span
               :class="{
-                'card-item-compared-text-up':
+                'new-user-compared-text-up':
                   dashBoardData.newUser.state === 'up',
-                'card-item-compared-text-down':
+                'new-user-compared-text-down':
                   dashBoardData.newUser.state === 'down',
-                'card-item-compared-text-stay':
+                'new-user-compared-text-stay':
                   dashBoardData.newUser.state === 'stay',
               }"
               >{{ dashBoardData.newUser.comparedWeek }}%</span
             >
             <div>
               <md-icon
-                v-html="stateArrow(dashBoardData.newUser.state)"
                 :class="{
-                  'card-item-compared-arrow-upward':
+                  'new-user-compared-arrow-upward':
                     dashBoardData.newUser.state === 'up',
-                  'card-item-compared-arrow-downward':
+                  'new-user-compared-arrow-downward':
                     dashBoardData.newUser.state === 'down',
-                  'card-item-compared-arrow-forward':
+                  'new-user-compared-arrow-forward':
                     dashBoardData.newUser.state === 'stay',
                 }"
+                v-html="stateArrow(dashBoardData.newUser.state)"
               >
               </md-icon>
             </div>
@@ -277,12 +277,12 @@
     </div>
     <div class="card">
       <div class="card-box col-12">
-        <span>アナリティクス</span>
+        <AnalyticsChart :series="dashBoardData.analytics" />
       </div>
     </div>
     <div class="card">
       <div class="card-box col-8">
-        <span>集客</span>
+        <AttractingCustomersChart :series="dashBoardData.attractingCustomers" />
       </div>
       <div class="card-box col-4">
         <span>デバイス別セッション数</span>
@@ -306,8 +306,21 @@
 </template>
 
 <script>
+import AnalyticsChart from '~/components/test/modules/AnalyticsChart.vue'
+import AttractingCustomersChart from '~/components/test/modules/AttractingCustomersChart.vue'
+
 export default {
   layout: 'dashboard',
+  components: {
+    AnalyticsChart,
+    AttractingCustomersChart,
+  },
+  async asyncData({ $api }) {
+    // デフォルトで表示するデータを取得する
+    return {
+      dashBoardData: await $api.getAPI('/apis/dashboaard_days7.json'),
+    }
+  },
   data() {
     return {
       checkedPeriod: '',
@@ -326,12 +339,6 @@ export default {
           title_ja: '3ヶ月',
         },
       ],
-    }
-  },
-  async asyncData({ $api }) {
-    // デフォルトで表示するデータを取得する
-    return {
-      dashBoardData: await $api.getAPI('/apis/dashboaard_days7.json'),
     }
   },
   computed: {
@@ -379,9 +386,11 @@ export default {
      * @param {string} period URIの指定
      */
     async getPeriodData(period) {
+      this.$nuxt.$loading.start()
       this.dashBoardData = await this.$api.getAPI(
         `/apis/dashboaard_${period}.json`
       )
+      this.$nuxt.$loading.finish()
     },
     /**
      * カンマ区切りにする
@@ -390,16 +399,6 @@ export default {
     commaSeparate(num) {
       return this.$common.commaSeparate(num)
     },
-    /**
-     * 選択したの期間のデータを返す
-     * @param {string} period
-     */
-    // changePeriod(period) {
-    //   const periodData = Object.values(this.dashBoardData).filter((data) => {
-    //     return data.title_ja.match(period)
-    //   })
-    //   this.periodData = periodData[0]
-    // },
     /**
      * 二回クリックでラジオのチェックを外す
      * @param {string} radio
@@ -417,6 +416,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/**
+  * ページ内共通mixin
+  */
 @mixin grid-layout($column-gap: 16px, $row-gap: 16px) {
   display: grid;
   grid-template-columns: repeat(12, calc(100% / 12 - #{$column-gap}));
@@ -433,8 +435,86 @@ export default {
   opacity: 1;
 }
 
+@mixin card-box-container() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin data-title() {
+  height: 25px;
+  text-align: left;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 17px;
+  letter-spacing: 0px;
+  color: #1e1e1e;
+}
+
+@mixin data-text() {
+  width: 134px;
+  height: 41px;
+  margin: 2px 0 0 0;
+  text-align: left;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 0px;
+  color: #1e1e1e;
+}
+
+@mixin compared() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 20px;
+}
+
+@mixin compared-title() {
+  width: 38px;
+  margin: 0 8px 0 0;
+  text-align: left;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  color: #8a8a8e;
+}
+
+@mixin compared-text() {
+  width: 52px;
+  margin: 0 0 0 8px;
+  text-align: left;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+@mixin compared-up() {
+  color: #34c759;
+}
+@mixin compared-stay() {
+  color: #ff453a;
+}
+@mixin compared-down() {
+  color: #8a8a8e;
+}
+
+@mixin compared-upward() {
+  margin: 0 0 0 8px;
+  @include compared-up;
+  animation: 0.2s ease 0s 1 normal none running arrow_anime_upward;
+}
+@mixin compared-downward() {
+  margin: 0 0 0 8px;
+  @include compared-down;
+  animation: 0.2s ease 0s 1 normal none running arrow_anime_downward;
+}
+@mixin compared-forward() {
+  margin: 0 0 0 8px;
+  @include compared-stay;
+  animation: 0.2s ease 0s 1 normal none running arrow_anime_forward;
+}
+
 /**
-  * card
+  * カードレイアウト
   */
 .card {
   margin: 0 -16px 0 0;
@@ -450,107 +530,63 @@ export default {
   &-box {
     @include component-card($padding: 32px 26px);
   }
-  &-item {
-    display: flex;
-    align-items: center;
-    &-data {
-      // width: 50%;
-      &-title {
-        height: 25px;
-        text-align: left;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 17px;
-        letter-spacing: 0px;
-        color: #1e1e1e;
-      }
-      &-text {
-        width: 134px;
-        height: 41px;
-        margin: 2px 0 0 0;
-        text-align: left;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-weight: bold;
-        font-size: 28px;
-        letter-spacing: 0px;
-        color: #1e1e1e;
-      }
+}
+
+/**
+ * ページビュー
+ * ユニークユーザー
+ * 直帰率
+ * コンバージョン率
+ */
+.page-view,
+.unique-user,
+.bounce-rate,
+.conversion-rate,
+.average-stay-time,
+.new-user {
+  @include card-box-container;
+  &-data {
+    &-title {
+      @include data-title;
     }
-    &-compared {
-      display: flex;
-      // width: 50%;
-      align-items: center;
-      justify-content: center;
-      margin: 0 0 0 20px;
-      &-title {
-        width: 38px;
-        margin: 0 8px 0 0;
-        text-align: left;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 12px;
-        color: #8a8a8e;
+    &-text {
+      @include data-text;
+    }
+  }
+  &-compared {
+    @include compared;
+    &-title {
+      @include compared-title;
+    }
+    &-text {
+      &-up {
+        @include compared-up;
       }
-      &-text {
-        width: 52px;
-        margin: 0 0 0 8px;
-        text-align: left;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 17px;
-        font-weight: bold;
-        letter-spacing: 0px;
-        &-up {
-          color: #34c759;
-        }
-        &-down {
-          color: #ff453a;
-        }
-        &-stay {
-          color: #8a8a8e;
-        }
+      &-down {
+        @include compared-down;
       }
-      &-arrow {
-        &-upward {
-          margin: 0 0 0 8px;
-          color: #34c759;
-          animation: 0.2s ease 0s 1 normal none running arrow_anime_upward;
-        }
-        &-forward {
-          margin: 0 0 0 8px;
-          color: #8a8a8e;
-          animation: 0.2s ease 0s 1 normal none running arrow_anime_forward;
-        }
-        &-downward {
-          margin: 0 0 0 8px;
-          color: #ff453a;
-          animation: 0.2s ease 0s 1 normal none running arrow_anime_downward;
-        }
+      &-stay {
+        @include compared-stay;
       }
-      @keyframes arrow_anime_upward {
-        0% {
-          transform: translateY(10px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
+      @include compared-text;
+    }
+    &-arrow {
+      &-upward {
+        @include compared-upward;
       }
-      @keyframes arrow_anime_forward {
-        0% {
-          transform: translateX(-10px);
-        }
-        100% {
-          transform: translateX(0px);
-        }
+      &-downward {
+        @include compared-downward;
       }
-      @keyframes arrow_anime_downward {
-        0% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
+      &-forward {
+        @include compared-forward;
       }
     }
   }
 }
+
+/**
+ * 過去のデータ
+ */
 .data-past {
   display: flex;
   align-items: center;
@@ -610,6 +646,88 @@ export default {
         }
       }
     }
+  }
+}
+
+/**
+ * アナリティクス
+ */
+.analytics {
+  &-title {
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #1e1e1e;
+    opacity: 1;
+  }
+}
+
+/**
+ * 集客
+ */
+.attracting-customers {
+  &-title {
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #1e1e1e;
+    opacity: 1;
+  }
+}
+
+/**
+ * デバイス別セッション数
+ */
+.sessions-device {
+  &-title {
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #1e1e1e;
+    opacity: 1;
+  }
+}
+
+/**
+ * フォーム
+ */
+.form {
+  &-title {
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #1e1e1e;
+    opacity: 1;
+  }
+}
+
+/**
+ * アニメーション
+ */
+
+// 矢印
+@keyframes arrow_anime_upward {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes arrow_anime_forward {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes arrow_anime_downward {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 </style>

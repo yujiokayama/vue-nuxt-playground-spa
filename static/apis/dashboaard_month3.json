@@ -31,10 +31,16 @@
     "comparedWeek": "1.08",
     "state": "stay"
   },
-  "analytics": {
-    "prev": 10,
-    "acitve": 30
-  },
+  "analytics": [
+    {
+      "name": "前月",
+      "data": [5, 10, 200, 1500, 120]
+    },
+    {
+      "name": "アクティブプロファイル数",
+      "data": [10, 30, 600, 110, 235]
+    }
+  ],
   "attractingCustomers": {
     "search": 10,
     "mail": 10,

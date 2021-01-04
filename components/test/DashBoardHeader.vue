@@ -49,6 +49,7 @@ export default {}
   padding: 16px 0;
   border-bottom: 1px solid #eaeaea;
   background-color: #fff;
+  z-index: 10;
   &-nav {
     display: flex;
     justify-content: flex-end;

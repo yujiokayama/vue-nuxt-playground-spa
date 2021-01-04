@@ -7,7 +7,7 @@
     "state": "stay"
   },
   "uniqueUser": {
-    "user":500,
+    "user": 500,
     "comparedWeek": "1.08",
     "state": "up"
   },
@@ -31,10 +31,16 @@
     "comparedWeek": "1.08",
     "state": "up"
   },
-  "analytics": {
-    "prev": 10,
-    "acitve": 30
-  },
+  "analytics": [
+    {
+      "name": "前月",
+      "data": [5, 700, 200, 50, 120]
+    },
+    {
+      "name": "アクティブプロファイル数",
+      "data": [10, 485, 320, 110, 900]
+    }
+  ],
   "attractingCustomers": {
     "search": 10,
     "mail": 10,

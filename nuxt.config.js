@@ -36,6 +36,14 @@ export default {
     },
   ],
 
+  // カスタムローダー
+  loading: '~/components/test/modules/LoadingBar.vue',
+
+  // SPAモードでの初回ロード＆リロード時のローダー
+  loadingIndicator: {
+    name: '~/template/spa-loading.html',
+  },
+
   // SCSSの変数を展開し、全ページから参照できるようにする
   styleResources: {
     scss: ['~/assets/styles/scss/variables/_color.scss'],

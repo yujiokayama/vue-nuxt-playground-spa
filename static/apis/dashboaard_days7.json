@@ -31,16 +31,27 @@
     "comparedWeek": "1.08",
     "state": "stay"
   },
-  "analytics": {
-    "prev": 10,
-    "acitve": 30
-  },
-  "attractingCustomers": {
-    "search": 10,
-    "mail": 10,
-    "site": 5,
-    "directInflow": 100
-  },
+  "analytics": [
+    {
+      "name": "前月",
+      "data": [5, 10, 200, 700, 120]
+    },
+    {
+      "name": "アクティブプロファイル数",
+      "data": [10, 30, 320, 110, 235]
+    }
+  ],
+  "attractingCustomers": [
+    {
+      "name": "ページビュー数",
+      "data": [
+        ["自然検索", 302],
+        ["メール", 215],
+        ["参照サイト", 91],
+        ["直接流入", 146]
+      ]
+    }
+  ],
   "sessionByDevice": {
     "PC": 40.2,
     "SP": 21.5,

@@ -36,7 +36,7 @@ export default {
 .main {
   position: relative;
   width: calc(100% - 250px);
-  left: 258px;
+  left: 250px;
   padding: 0 40px;
 }
 </style>
