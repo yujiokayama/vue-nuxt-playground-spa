@@ -18,7 +18,6 @@
             name="period"
             :value="period.title_en"
             @change="getPeriodData(checkedPeriod)"
-            @click="radioCheckRemove($event)"
           />
           <label
             v-for="period in periodList"
@@ -285,19 +284,24 @@
         <AttractingCustomersChart :series="dashBoardData.attractingCustomers" />
       </div>
       <div class="card-box col-4">
-        <span>デバイス別セッション数</span>
+        <SessionsByDeviceChart :series="dashBoardData.sessionByDevice" />
       </div>
     </div>
     <div class="card">
+      <span class="form-title">フォーム一覧</span>
       <div class="card-box col-12">
         <table>
           <thead>
-            <th>head</th>
+            <tr>
+              <th>フォーム名</th>
+              <th>種別</th>
+              <th>最終回答日時</th>
+              <th>未確認の回答データ</th>
+              <th>詳細</th>
+            </tr>
           </thead>
           <tbody>
-            <tr>
-              body
-            </tr>
+            <tr></tr>
           </tbody>
         </table>
       </div>
@@ -308,12 +312,14 @@
 <script>
 import AnalyticsChart from '~/components/test/modules/AnalyticsChart.vue'
 import AttractingCustomersChart from '~/components/test/modules/AttractingCustomersChart.vue'
+import SessionsByDeviceChart from '~/components/test/modules/SessionsByDeviceChart.vue'
 
 export default {
   layout: 'dashboard',
   components: {
     AnalyticsChart,
     AttractingCustomersChart,
+    SessionsByDeviceChart,
   },
   async asyncData({ $api }) {
     // デフォルトで表示するデータを取得する
@@ -324,7 +330,6 @@ export default {
   data() {
     return {
       checkedPeriod: '',
-      periodData: this.dashBoardData,
       periodList: [
         {
           title_en: 'days7',
@@ -379,6 +384,14 @@ export default {
     this.$refs.dataPastCheck[0].checked = true
     // デフォルトで7日間のラジオボタンの値を代入する
     this.checkedPeriod = this.$refs.dataPastCheck[0].value
+  },
+  watch: {
+    dashBoardData: {
+      handler(newData, oldData) {
+        console.log(newData)
+      },
+      deep: true,
+    },
   },
   methods: {
     /**
@@ -445,7 +458,7 @@ export default {
   text-align: left;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 17px;
-  letter-spacing: 0px;
+
   color: #1e1e1e;
 }
 
@@ -457,7 +470,7 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: bold;
   font-size: 28px;
-  letter-spacing: 0px;
+
   color: #1e1e1e;
 }
 
@@ -484,7 +497,6 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 17px;
   font-weight: bold;
-  letter-spacing: 0px;
 }
 
 @mixin compared-up() {
@@ -600,7 +612,7 @@ export default {
     width: 190px;
     font-size: 22px;
     text-align: left;
-    letter-spacing: 0px;
+
     color: #1e1e1e;
     opacity: 1;
     &-icon {
@@ -656,7 +668,7 @@ export default {
   &-title {
     text-align: left;
     font-size: 20px;
-    letter-spacing: 0px;
+
     color: #1e1e1e;
     opacity: 1;
   }
@@ -669,7 +681,7 @@ export default {
   &-title {
     text-align: left;
     font-size: 20px;
-    letter-spacing: 0px;
+
     color: #1e1e1e;
     opacity: 1;
   }
@@ -682,7 +694,6 @@ export default {
   &-title {
     text-align: left;
     font-size: 20px;
-    letter-spacing: 0px;
     color: #1e1e1e;
     opacity: 1;
   }
@@ -693,11 +704,10 @@ export default {
  */
 .form {
   &-title {
-    text-align: left;
+    display: block;
+    width: 100vw;
     font-size: 20px;
-    letter-spacing: 0px;
     color: #1e1e1e;
-    opacity: 1;
   }
 }
 

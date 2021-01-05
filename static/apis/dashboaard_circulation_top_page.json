@@ -1,0 +1,22 @@
+{
+  "top": {
+    "pageTitle": "トップページ",
+    "pvCount": 100,
+    "uuCount": 200,
+    "averageVisitedTime": "00:02:19",
+    "browsingStarts": 500,
+    "bounceRate": 90,
+    "earnedScore": 500,
+    "cvCount": 500
+  },
+  "service": {
+    "pageTitle": "サービス紹介",
+    "pvCount": 1000,
+    "uuCount": 300,
+    "averageVisitedTime": "00:12:19",
+    "browsingStarts": 500,
+    "bounceRate": 40,
+    "earnedScore": 900,
+    "cvCount": 900
+  }
+}

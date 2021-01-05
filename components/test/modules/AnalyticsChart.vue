@@ -20,22 +20,25 @@ export default {
           enabled: false,
         },
         chart: {
-          type: 'area',
+          type: 'spline',
+          // type: 'areaspline',
         },
         title: {
           text: 'アナリティクス',
           align: 'left',
+          margin: 40,
           style: {
             color: '#1e1e1e',
             fontFamily: 'Noto Sans JP, sans-serif',
             fontSize: '20px',
-            letterSpacing: '0px',
           },
         },
         /**
          * 凡例
          */
         legend: {
+          // 表示・非表示
+          enabled: false,
           // 表示位置
           verticalAlign: 'top',
           // テキスト表示位置
@@ -51,10 +54,7 @@ export default {
         },
         // ラベルの値を日付にしたい(間隔を1週間毎)
         xAxis: {
-          type: 'datetime',
-          labels: {
-            format: '{value:%b-%e}',
-          },
+          categories: ['01/01', '01/08', '01/15', '01/22', '01/29'],
         },
         yAxis: {
           title: {
@@ -66,8 +66,7 @@ export default {
           enabled: false,
         },
         plotOptions: {
-          area: {
-            // animation: false,
+          spline: {
             marker: {
               enabled: false,
               symbol: 'circle',
@@ -80,19 +79,17 @@ export default {
             },
           },
         },
-        // series: this.series,
-        series: [
-          {
-            name: this.series[0].name,
-            data: this.series[0].data,
-          },
-          {
-            name: this.series[1].name,
-            data: this.series[1].data,
-          },
-        ],
+        series: this.series,
       },
     }
+  },
+  watch: {
+    series: {
+      handler(newSeries, oldSeries) {
+        this.chartOptions.series = newSeries
+      },
+      deep: true,
+    },
   },
 }
 </script>

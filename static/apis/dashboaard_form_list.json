@@ -1,0 +1,32 @@
+[
+  {
+    "type": "お問い合わせ",
+    "lastAnswer": "2020/10/01 14:07",
+    "unconfirmedAnswer": 2,
+    "detail": "https://xxx.xxx"
+  },
+  {
+    "type": "セミナー",
+    "lastAnswer": "2020/11/01 14:07",
+    "unconfirmedAnswer": 1,
+    "detail": "https://xxx.xxx"
+  },
+  {
+    "type": "資料請求",
+    "lastAnswer": "2020/12/01 14:07",
+    "unconfirmedAnswer": 3,
+    "detail": "https://xxx.xxx"
+  },
+  {
+    "type": "セミナー2",
+    "lastAnswer": "2020/01/01 14:07",
+    "unconfirmedAnswer": 4,
+    "detail": "https://xxx.xxx"
+  },
+  {
+    "type": "セミナー2",
+    "lastAnswer": "2020/01/05 14:07",
+    "unconfirmedAnswer": 5,
+    "detail": "https://xxx.xxx"
+  }
+]

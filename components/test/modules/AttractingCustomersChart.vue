@@ -50,10 +50,20 @@ export default {
           symbolPadding: 5,
         },
         xAxis: {
+          categories: this.series[0].data.map((data) => {
+            return data.name
+          }),
           title: {
-            text: '',
+            text: null,
           },
-          labels: {},
+          labels: {
+            style: {
+              color: '#1e1e1e',
+              fontFamily: 'Noto Sans JP, sans-serif',
+              fontSize: '13px',
+              letterSpacing: '0px',
+            },
+          },
         },
         yAxis: {
           title: {
@@ -66,19 +76,40 @@ export default {
         },
         plotOptions: {
           bar: {
-            animation: false,
+            // グラフに文字を積み重ねる
+            stacking: 'normal',
+            // アニメーション
+            animation: true,
+            // 凡例のマーカーの色
+            color: '#4F7DF0',
           },
           series: {
             dataLabels: {
               enabled: true,
-              format: '<b>{point.name}</b> ({point.y:,.0f})',
-              softConnector: true,
+              crop: false,
+              // 描画されるデータの表示形式
+              format: '{point.y:,.0f}',
+              style: {
+                color: '#ffffff',
+                fontFamily: 'Noto Sans JP, sans-serif',
+                fontWeight: 'normal',
+                fontSize: '12px',
+                letterSpacing: '1px',
+              },
             },
           },
         },
         series: this.series,
       },
     }
+  },
+  watch: {
+    series: {
+      handler(newSeries, oldSeries) {
+        this.chartOptions.series = newSeries
+      },
+      deep: true,
+    },
   },
 }
 </script>
